@@ -179,91 +179,6 @@ a { color: inherit; text-decoration: none; }
 }
 .nav__toggle span { width: 26px; height: 2px; background: var(--cream); border-radius: 2px; transition: 0.3s var(--ease); }
 
-/* ---------- Immersive scroll-expand intro ---------- */
-.immersive {
-  --p: 0;
-  position: relative;
-  height: 240vh;            /* scroll travel that drives the expansion */
-  background: var(--bg);
-  z-index: 1;
-}
-.immersive__sticky {
-  position: sticky; top: 0;
-  height: 100vh; height: 100svh;
-  overflow: hidden;
-  display: grid; place-items: center;
-}
-
-/* ambient still behind the media, gently fading + settling as it expands */
-.immersive__bg { position: absolute; inset: 0; z-index: 0; opacity: calc(1 - var(--p) * 0.5); }
-.immersive__bg img { width: 100%; height: 100%; object-fit: cover;
-  transform: scale(calc(1.14 - var(--p) * 0.14)); }
-.immersive__bg-veil { position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(14,12,10,0.45), rgba(14,12,10,0.30) 40%, rgba(14,12,10,0.78)); }
-
-/* the expanding video card → full-bleed */
-.immersive__media {
-  position: relative; z-index: 2; overflow: hidden;
-  width: calc(330px + (100vw - 330px) * var(--p));
-  height: calc(440px + (100vh - 440px) * var(--p));
-  max-width: 100vw; max-height: 100vh;
-  border-radius: calc(22px * (1 - var(--p)));
-  box-shadow: 0 50px 100px -30px rgba(0,0,0,calc(0.8 - var(--p) * 0.8));
-}
-.immersive__video { width: 100%; height: 100%; object-fit: cover; display: block; }
-.immersive__scrim { position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(14,12,10,0.18), transparent 32%, rgba(14,12,10,0.55)); }
-
-/* split headline, sliding apart as you scroll */
-.immersive__headline {
-  position: absolute; z-index: 3; inset: 0;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.04em;
-  pointer-events: none; text-align: center;
-  opacity: calc(1 - max(0, (var(--p) - 0.5)) * 2.4);
-}
-.immersive__word {
-  font-family: var(--serif); font-weight: 800; line-height: 0.98; color: var(--cream);
-  font-size: clamp(2.6rem, 11vw, 8rem); letter-spacing: -0.02em;
-  text-shadow: 0 8px 40px rgba(0,0,0,0.55);
-}
-.immersive__word--l { transform: translateX(calc(var(--p) * -24vw)); }
-.immersive__word--r { transform: translateX(calc(var(--p) * 24vw)); font-style: italic; color: var(--green-bright); }
-
-/* caption that fades in once the forest fills the screen (lives inside the media) */
-.immersive__caption {
-  position: absolute; z-index: 4; left: 0; right: 0; bottom: clamp(30px, 7vh, 76px);
-  display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center;
-  opacity: calc((var(--p) - 0.74) * 4);
-  transform: translateY(calc((1 - var(--p)) * 26px));
-  pointer-events: none;
-}
-.immersive__eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.28em;
-  text-transform: uppercase; color: var(--green-bright); }
-.immersive__captitle { font-family: var(--serif); font-style: italic;
-  font-size: clamp(1.6rem, 4vw, 2.7rem); color: var(--cream); }
-
-/* keep the fixed header legible over bright footage */
-.immersive__topscrim { position: absolute; z-index: 3; inset: 0 0 auto 0; height: 150px;
-  background: linear-gradient(180deg, rgba(14,12,10,0.55), transparent); pointer-events: none; }
-
-/* scroll cue, fades out as expansion begins */
-.immersive__cue {
-  position: absolute; z-index: 4; bottom: 22px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--cream); opacity: calc(1 - var(--p) * 4); white-space: nowrap;
-}
-.immersive__cue-arrow { width: 22px; height: 36px; border: 1.5px solid rgba(244,239,226,0.55);
-  border-radius: 12px; position: relative; }
-.immersive__cue-arrow::after { content: ""; position: absolute; top: 7px; left: 50%;
-  transform: translateX(-50%); width: 4px; height: 8px; border-radius: 4px;
-  background: var(--green-bright); animation: cue 1.6s var(--ease) infinite; }
-
-@media (prefers-reduced-motion: reduce) {
-  .immersive { height: 100vh; height: 100svh; }
-  .immersive__cue { display: none; }
-}
-
 /* ---------- Hero ---------- */
 .hero {
   position: relative; isolation: isolate;
@@ -949,7 +864,11 @@ a { color: inherit; text-decoration: none; }
   .scroll-cue { display: none; }
 }
 
-@media (max-width: 760px) {
+/* Collapse to the hamburger menu while the full horizontal nav still fits.
+   The six links + CTA need ~880px, so switch over at 900px — this covers
+   iPad portrait (768) and other mid-width tablets that previously showed a
+   cramped, wrapping, partly-cut-off desktop nav. */
+@media (max-width: 900px) {
   .nav__links, .nav__cta { display: none; }
   .nav__toggle { display: flex; }
   .site-header.nav-open {
@@ -966,7 +885,9 @@ a { color: inherit; text-decoration: none; }
   .nav-open .nav__toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-open .nav__toggle span:nth-child(2) { opacity: 0; }
   .nav-open .nav__toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
 
+@media (max-width: 760px) {
   .hero { padding-top: 120px; }
   .hero__stats { gap: 28px; }
   .species { grid-template-columns: 1fr; max-width: 420px; margin-inline: auto; }
@@ -975,6 +896,12 @@ a { color: inherit; text-decoration: none; }
   .footer__brand { grid-column: 1 / -1; }
   .ticks--two { grid-template-columns: 1fr; }
   .forage__facts { grid-template-columns: 1fr; }
+
+  /* The WhatsApp label ("WhatsApp Gary · 073 936 2378") is long; .btn defaults
+     to white-space:nowrap, which forced its min-width past a phone's screen and
+     pushed the whole page sideways. Let it wrap so the page stays the width of
+     the viewport. */
+  .forage__book .btn--whatsapp { white-space: normal; line-height: 1.35; }
 }
 
 @media (max-width: 460px) {

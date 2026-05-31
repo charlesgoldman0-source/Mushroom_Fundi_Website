@@ -44,43 +44,6 @@
     </div>
   </header>
 
-  <!-- ===== Immersive scroll-expand intro ===== -->
-  <section class="immersive" id="immersive" aria-label="Into the forest">
-    <div class="immersive__sticky">
-      <div class="immersive__bg" aria-hidden="true">
-        <img src="assets/forest-backdrop.jpg" alt="" />
-        <div class="immersive__bg-veil"></div>
-      </div>
-
-      <div class="immersive__media">
-        <video
-          class="immersive__video"
-          src="assets/video/forest-sunlight.mp4"
-          poster="assets/video/poster.jpg"
-          autoplay muted loop playsinline preload="metadata"
-          disablepictureinpicture></video>
-        <div class="immersive__scrim" aria-hidden="true"></div>
-
-        <div class="immersive__caption">
-          <span class="immersive__eyebrow">Cape Town · Wild Mushroom Company</span>
-          <span class="immersive__captitle">Where every forage begins</span>
-        </div>
-      </div>
-
-      <div class="immersive__headline" aria-hidden="true">
-        <span class="immersive__word immersive__word--l">Into the</span>
-        <span class="immersive__word immersive__word--r">Forest</span>
-      </div>
-
-      <div class="immersive__topscrim" aria-hidden="true"></div>
-
-      <p class="immersive__cue">
-        <span>Scroll to step inside</span>
-        <span class="immersive__cue-arrow"></span>
-      </p>
-    </div>
-  </section>
-
   <!-- ===== Hero ===== -->
   <section class="hero">
     <div class="hero__bg" aria-hidden="true">
@@ -716,31 +679,6 @@
     const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
-
-    // immersive scroll-expand intro: drive --p (0 → 1) from scroll position
-    const immersive = document.querySelector('.immersive');
-    if (immersive) {
-      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      let ticking = false;
-      const updateImmersive = () => {
-        ticking = false;
-        const stage = immersive.offsetHeight - window.innerHeight; // scrollable travel
-        const scrolled = Math.min(Math.max(-immersive.getBoundingClientRect().top, 0), stage);
-        const p = stage > 0 ? scrolled / stage : 1;
-        immersive.style.setProperty('--p', p.toFixed(4));
-        immersive.classList.toggle('is-open', p > 0.92);
-      };
-      if (reduce) {
-        immersive.style.setProperty('--p', '1');
-        immersive.classList.add('is-open');
-      } else {
-        updateImmersive();
-        window.addEventListener('scroll', () => {
-          if (!ticking) { ticking = true; requestAnimationFrame(updateImmersive); }
-        }, { passive: true });
-        window.addEventListener('resize', updateImmersive);
-      }
-    }
 
     // Know Your Fungi — rotate the species shown on each visit, drawn from the
     // field guide. Always surfaces something medicinal and something dangerous,
