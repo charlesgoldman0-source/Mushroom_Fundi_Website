@@ -1,0 +1,18 @@
+# Disposable intermediates / processing files
+.tmp/
+node_modules/
+
+# Source/brand material not served by the live site
+brand_assets/
+titancup.html
+
+# Secrets — never commit
+.env
+credentials.json
+token.json
+token*.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log

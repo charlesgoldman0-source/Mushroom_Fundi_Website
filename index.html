@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mushroom Fundi — Wild Mushroom Forages &amp; the Field Guide · Cape Town</title>
+  <meta name="description" content="Mushroom Fundi is Gary Goldman's Cape Town mushroom company — guided wild forages at first light and the field guide that started it all. Know your mushrooms. Trust the Fundi." />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Ambient spores (page-anchored, gently drifting — populated by JS) ===== -->
+  <div class="ambient" aria-hidden="true"></div>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Mushroom Fundi home">
+        <span class="brand__badge"><img src="assets/logo.png" alt="Mushroom Fundi logo" /></span>
+        <span class="brand__word">Mushroom <em>Fundi</em></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#forage">Book a Forage</a>
+        <a href="#about">About</a>
+        <a href="#offer">What We Do</a>
+        <a href="#fungi">Know Your Fungi</a>
+        <a href="#book">The Book</a>
+        <a href="#testimonials">Reviews</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="#forage" class="btn btn--primary">Book a Forage</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Immersive scroll-expand intro ===== -->
+  <section class="immersive" id="immersive" aria-label="Into the forest">
+    <div class="immersive__sticky">
+      <div class="immersive__bg" aria-hidden="true">
+        <img src="assets/forest-backdrop.jpg" alt="" />
+        <div class="immersive__bg-veil"></div>
+      </div>
+
+      <div class="immersive__media">
+        <video
+          class="immersive__video"
+          src="assets/video/forest-sunlight.mp4"
+          poster="assets/video/poster.jpg"
+          autoplay muted loop playsinline preload="metadata"
+          disablepictureinpicture></video>
+        <div class="immersive__scrim" aria-hidden="true"></div>
+
+        <div class="immersive__caption">
+          <span class="immersive__eyebrow">Cape Town · Wild Mushroom Company</span>
+          <span class="immersive__captitle">Where every forage begins</span>
+        </div>
+      </div>
+
+      <div class="immersive__headline" aria-hidden="true">
+        <span class="immersive__word immersive__word--l">Into the</span>
+        <span class="immersive__word immersive__word--r">Forest</span>
+      </div>
+
+      <div class="immersive__topscrim" aria-hidden="true"></div>
+
+      <p class="immersive__cue">
+        <span>Scroll to step inside</span>
+        <span class="immersive__cue-arrow"></span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="hero__glow"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow eyebrow--green">Cape Town · Wild Mushroom Company</p>
+        <h1 class="hero__title">
+          Know your <span class="ital">mushrooms.</span><br />
+          Trust the <span class="green">Fundi.</span>
+        </h1>
+        <p class="hero__lede">
+          Gary Goldman has spent a lifetime among the fynbos and forest floor — learning
+          which fungi to feast on, which to leave well alone, and how to read the wild
+          like a local. Now he's sharing it: small-group guided forages at first light,
+          and the field guide that started it&nbsp;all.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#forage" class="btn btn--primary btn--lg">Book a Forage</a>
+          <a href="#book" class="btn btn--ghost btn--lg">Get the Book</a>
+        </div>
+
+        <ul class="hero__stats">
+          <li><strong>25+</strong><span>Years foraging the Cape</span></li>
+          <li><strong>200+</strong><span>Species in the guide</span></li>
+          <li><strong>1,000+</strong><span>Foragers trained</span></li>
+        </ul>
+      </div>
+
+      <figure class="hero__media">
+        <div class="hero__photo">
+          <img src="assets/hero-porcini.jpg" alt="A wild porcini (Boletus edulis) growing in Cape pine forest" data-hero-img />
+          <span class="hero__tag" data-hero-tag><span class="dotmark dotmark--edible"></span>Boletus edulis · Porcini</span>
+        </div>
+        <div class="hero__photo-glow" aria-hidden="true"></div>
+      </figure>
+    </div>
+
+    <a href="#forage" class="scroll-cue" aria-label="Scroll to booking">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ===== The Forage (booking details) — primary CTA ===== -->
+  <section class="forage" id="forage">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow eyebrow--green">Book a Forage</p>
+        <h2 class="section-title">Hunt your breakfast at first light.</h2>
+        <p class="section-sub">
+          A small-group dawn walk through the Cape's wild mushroom country, led by Gary
+          himself — and you take home what we find. If we don't find mushrooms, we go
+          again. That's the guarantee.
+        </p>
+      </header>
+
+      <div class="forage__panel">
+        <ul class="forage__facts">
+          <li class="fact">
+            <span class="fact__label">Per person</span>
+            <strong class="fact__val">R750</strong>
+            <span class="fact__note">Kids under 12 forage free</span>
+          </li>
+          <li class="fact">
+            <span class="fact__label">First light</span>
+            <strong class="fact__val">Pre-dawn</strong>
+            <span class="fact__note">Begins 30&nbsp;minutes before sunrise — never later than 06h45</span>
+          </li>
+          <li class="fact">
+            <span class="fact__label">Group size</span>
+            <strong class="fact__val">1&ndash;8</strong>
+            <span class="fact__note">Intimate groups, never more than eight — booking is essential</span>
+          </li>
+          <li class="fact fact--guarantee">
+            <span class="fact__label">The guarantee</span>
+            <strong class="fact__val">Wild, or we retry</strong>
+            <span class="fact__note">No mushrooms found? We reschedule and go again at a later date</span>
+          </li>
+        </ul>
+
+        <div class="forage__book">
+          <h3>How to book</h3>
+          <ol class="forage__steps">
+            <li>Message Gary on WhatsApp with the day you'd like to go.</li>
+            <li>He'll check the scheduler and let you know if there's space.</li>
+            <li>Meet before dawn — and bring a basket for breakfast.</li>
+          </ol>
+          <a class="btn btn--whatsapp btn--lg"
+             href="https://wa.me/27739362378?text=Hi%20Gary%2C%20I%27d%20like%20to%20book%20a%20Mushroom%20Fundi%20forage.%20Which%20days%20do%20you%20have%20space%3F"
+             target="_blank" rel="noopener">
+            <svg class="btn__wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.2A12.8 12.8 0 0 0 4.9 22.5L3.2 28.8l6.5-1.7A12.8 12.8 0 1 0 16 3.2Zm0 23.3a10.5 10.5 0 0 1-5.3-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.5 10.5 0 1 1 16 26.5Zm5.8-7.8c-.3-.2-1.9-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.6 8.6 0 0 1-2.5-1.6 9.5 9.5 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.7l.5-.6.4-.6a.6.6 0 0 0 0-.6c0-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.2 6.2 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.9c2 .8 2.7.9 3.7.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c0-.2-.3-.3-.6-.4Z"/></svg>
+            WhatsApp Gary · 073 936 2378
+          </a>
+          <p class="forage__finefoot">Booking is essential — spaces are capped at eight per forage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Marquee — species from the field guide, filled by JS ===== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" data-marquee></div>
+  </div>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+      <div class="about__media">
+        <figure class="framed">
+          <img src="assets/about-foraging.jpg" alt="A freshly foraged bolete, lifted from the forest floor" />
+          <figcaption>Fresh from the forest floor — a forager's find</figcaption>
+        </figure>
+        <div class="about__badge">
+          <span class="about__badge-num">The</span>
+          <span class="about__badge-word">Fundi</span>
+        </div>
+      </div>
+
+      <div class="about__body">
+        <p class="eyebrow">Meet the Fundi</p>
+        <h2 class="section-title">A lifetime spent reading the forest floor.</h2>
+        <p>
+          In Cape Town slang, a <em>fundi</em> is someone who truly knows their craft.
+          Gary Goldman earned the name the hard way — decades of dawn walks through pine
+          plantations and Afromontane forest, magnifying glass in one hand and basket in
+          the other, learning to tell a prized porcini from a dangerous pretender.
+        </p>
+        <p>
+          What began as a personal obsession became a mission: to take the fear and
+          mystery out of fungi and put real, careful knowledge in its place. Today
+          Mushroom Fundi helps everyday people forage safely, grow their own, and cook
+          with the most extraordinary ingredients on earth.
+        </p>
+
+        <ul class="ticks">
+          <li>Hands-on, identification-first teaching</li>
+          <li>Safety and conservation before the basket</li>
+          <li>From spore print to skillet — the whole journey</li>
+        </ul>
+
+        <a href="#offer" class="link-arrow">See what we do <span>&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Press / As featured in ===== -->
+  <section class="press" aria-label="Press coverage">
+    <div class="container press__inner">
+      <p class="press__eyebrow">As featured in</p>
+      <ul class="press__list">
+        <li>Sunday&nbsp;Times</li>
+        <li>Mail&nbsp;&amp;&nbsp;Guardian</li>
+        <li>Getaway</li>
+        <li>SA&nbsp;Country&nbsp;Life</li>
+        <li>Cape&nbsp;Times</li>
+        <li>Weekend&nbsp;Argus</li>
+        <li>British&nbsp;Airways</li>
+        <li>Landbouweekblad</li>
+        <li>Mango</li>
+        <li>Top&nbsp;Billing <span>SABC&nbsp;TV</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Offerings ===== -->
+  <section class="offer" id="offer">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow eyebrow--green">What We Do</p>
+        <h2 class="section-title">Two ways to go deeper into fungi.</h2>
+        <p class="section-sub">
+          Whether you want to walk the wild forest at first light or simply read up
+          first — there's a way in.
+        </p>
+      </header>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card__icon"><svg viewBox="0 0 100 100"><use href="#shroom" /></svg></div>
+          <h3>Wild Forages</h3>
+          <p>
+            Small-group dawn walks through the Cape's secret mushroom spots. Learn to
+            identify, harvest responsibly, and take home wild mushrooms for breakfast —
+            <em>guaranteed</em>.
+          </p>
+          <span class="card__meta">From R750 pp · Booking essential</span>
+        </article>
+
+        <article class="card">
+          <div class="card__icon"><svg viewBox="0 0 100 100"><use href="#ic-book" /></svg></div>
+          <h3>The Field Guide</h3>
+          <p>
+            <em>The Mushroom Fundi</em> — a beautifully photographed guide to the Cape's
+            wild fungi, distilled from 25&nbsp;years on the trail.
+          </p>
+          <span class="card__meta">Available now</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Know Your Fungi (infographic) ===== -->
+  <section class="fungi" id="fungi">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow eyebrow--green">Field Notes</p>
+        <h2 class="section-title">Know your fungi.</h2>
+        <p class="section-sub">
+          A fresh six from the guide each visit — the delicious, the medicinal, and
+          the deadly. Tap into the field data behind every safe forage.
+        </p>
+      </header>
+
+      <!-- legend -->
+      <ul class="legend" aria-label="Edibility key">
+        <li><span class="dotmark dotmark--edible"></span> Choice edible</li>
+        <li><span class="dotmark dotmark--medicinal"></span> Medicinal</li>
+        <li><span class="dotmark dotmark--poison"></span> Poisonous</li>
+        <li><span class="dotmark dotmark--deadly"></span> Deadly</li>
+      </ul>
+
+      <p class="species__hint">Tap any card to flip it over for the field notes — telltale signs, look-alikes and a fact from the guide.</p>
+
+      <div class="species" data-species>
+
+        <!-- Porcini -->
+        <article class="spec spec--edible" tabindex="0" role="button" aria-pressed="false" aria-label="Porcini, Boletus edulis. Activate to read field notes.">
+          <div class="spec__inner">
+            <div class="spec__face spec__front">
+              <div class="spec__photo">
+                <img src="assets/sp-porcini.jpg" alt="Boletus edulis, the porcini, in pine forest" loading="lazy" />
+                <span class="spec__flag">Choice edible</span>
+              </div>
+              <div class="spec__front-body">
+                <h3 class="spec__name">Porcini <span>Boletus edulis</span></h3>
+                <p class="spec__blurb">The mushroom hunter's delight — meaty, nutty and prized worldwide.</p>
+                <span class="spec__cue">Field notes <span class="spec__cue-icon">&#x21BB;</span></span>
+              </div>
+            </div>
+            <div class="spec__face spec__back">
+              <h3 class="spec__name spec__name--back">Porcini <span>Boletus edulis</span></h3>
+              <div class="spec__note">
+                <h4>Telltale signs</h4>
+                <ul>
+                  <li>Smooth tan to chestnut, red-brown cap — dry and glossy</li>
+                  <li>Barrel-shaped stipe with a raised white net over its upper half</li>
+                  <li>White pores age to olive; flesh never bruises blue</li>
+                </ul>
+              </div>
+              <div class="spec__note">
+                <h4>Easily confused with</h4>
+                <p><em>Boletus reticulatus</em>, <em>B. aereus</em> and the bay bolete — but porcini flesh and pores don't bruise blue.</p>
+              </div>
+              <div class="spec__note">
+                <h4>From the field</h4>
+                <p>South African porcini are free of the insect larvae that plague European ones — making ours highly sought after worldwide.</p>
+              </div>
+              <span class="spec__cue spec__cue--back">Flip back <span class="spec__cue-icon">&#x21BA;</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bay bolete -->
+        <article class="spec spec--edible" tabindex="0" role="button" aria-pressed="false" aria-label="Bay bolete, Imleria badia. Activate to read field notes.">
+          <div class="spec__inner">
+            <div class="spec__face spec__front">
+              <div class="spec__photo">
+                <img src="assets/sp-baybolete.jpg" alt="Imleria badia, the bay bolete, in pine needles" loading="lazy" />
+                <span class="spec__flag">Edible</span>
+              </div>
+              <div class="spec__front-body">
+                <h3 class="spec__name">Bay Bolete <span>Imleria badia</span></h3>
+                <p class="spec__blurb">A beginner-friendly bolete with a glossy bay-brown cap.</p>
+                <span class="spec__cue">Field notes <span class="spec__cue-icon">&#x21BB;</span></span>
+              </div>
+            </div>
+            <div class="spec__face spec__back">
+              <h3 class="spec__name spec__name--back">Bay Bolete <span>Imleria badia</span></h3>
+              <div class="spec__note">
+                <h4>Telltale signs</h4>
+                <ul>
+                  <li>Bay to chestnut cap, sticky when wet, drying to a polished sheen</li>
+                  <li>Stipe finely streaked — never a raised net like porcini</li>
+                  <li>Pale pores bruise blue-green at a touch</li>
+                </ul>
+              </div>
+              <div class="spec__note">
+                <h4>Easily confused with</h4>
+                <p>Other boletes — but the blue-bruising pores of young specimens give it away.</p>
+              </div>
+              <div class="spec__note">
+                <h4>From the field</h4>
+                <p>Those blue stains are just boletol oxidising — a harmless substance found in many boletes.</p>
+              </div>
+              <span class="spec__cue spec__cue--back">Flip back <span class="spec__cue-icon">&#x21BA;</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Reishi -->
+        <article class="spec spec--medicinal" tabindex="0" role="button" aria-pressed="false" aria-label="Reishi, Ganoderma lucidum. Activate to read field notes.">
+          <div class="spec__inner">
+            <div class="spec__face spec__front">
+              <div class="spec__photo">
+                <img src="assets/sp-reishi.jpg" alt="A lacquered Ganoderma bracket, the reishi" loading="lazy" />
+                <span class="spec__flag">Medicinal</span>
+              </div>
+              <div class="spec__front-body">
+                <h3 class="spec__name">Reishi <span>Ganoderma lucidum</span></h3>
+                <p class="spec__blurb">The lacquered "mushroom of immortality" — woody, and brewed for medicine.</p>
+                <span class="spec__cue">Field notes <span class="spec__cue-icon">&#x21BB;</span></span>
+              </div>
+            </div>
+            <div class="spec__face spec__back">
+              <h3 class="spec__name spec__name--back">Reishi <span>Ganoderma lucidum</span></h3>
+              <div class="spec__note">
+                <h4>Telltale signs</h4>
+                <ul>
+                  <li>Shiny, varnished crust like lacquered wood — cream to red-chestnut</li>
+                  <li>Corky-to-woody bracket, often in overlapping tiers</li>
+                  <li>White pore surface browns when bruised; rust-brown spores</li>
+                </ul>
+              </div>
+              <div class="spec__note">
+                <h4>Easily confused with</h4>
+                <p><em>Ganoderma applanatum</em> and <em>Amauroderma sprucei</em>; <em>G. tsugae</em> and <em>G. curtisii</em> share the varnished look.</p>
+              </div>
+              <div class="spec__note">
+                <h4>From the field</h4>
+                <p>Called the "King of Herbs" in ancient China — traditionally taken for immunity, inflammation and stress.</p>
+              </div>
+              <span class="spec__cue spec__cue--back">Flip back <span class="spec__cue-icon">&#x21BA;</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Termitomyces -->
+        <article class="spec spec--edible" tabindex="0" role="button" aria-pressed="false" aria-label="Termite mushroom, Termitomyces clypeatus. Activate to read field notes.">
+          <div class="spec__inner">
+            <div class="spec__face spec__front">
+              <div class="spec__photo">
+                <img src="assets/g-termite.jpg" alt="A large Termitomyces emerging from a termite mound" loading="lazy" />
+                <span class="spec__flag">Choice edible</span>
+              </div>
+              <div class="spec__front-body">
+                <h3 class="spec__name">Termite Mushroom <span>Termitomyces clypeatus</span></h3>
+                <p class="spec__blurb">Among Africa's most prized wild edibles — farmed underground by termites.</p>
+                <span class="spec__cue">Field notes <span class="spec__cue-icon">&#x21BB;</span></span>
+              </div>
+            </div>
+            <div class="spec__face spec__back">
+              <h3 class="spec__name spec__name--back">Termite Mushroom <span>Termitomyces clypeatus</span></h3>
+              <div class="spec__note">
+                <h4>Telltale signs</h4>
+                <ul>
+                  <li>Brown cap with a sharply pointed umbo (central peak)</li>
+                  <li>Cylindrical, lengthwise-grooved stipe; grows densely clustered</li>
+                  <li>Stipe tapers into a long root reaching the termite nest</li>
+                </ul>
+              </div>
+              <div class="spec__note">
+                <h4>Easily confused with</h4>
+                <p>Other <em>Termitomyces</em> and <em>Agaricus</em> species.</p>
+              </div>
+              <div class="spec__note">
+                <h4>From the field</h4>
+                <p>Termites farm it on underground combs — the mushroom rises on a root-like stalk (pseudorhiza) after the rains.</p>
+              </div>
+              <span class="spec__cue spec__cue--back">Flip back <span class="spec__cue-icon">&#x21BA;</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fly agaric -->
+        <article class="spec spec--poison" tabindex="0" role="button" aria-pressed="false" aria-label="Fly agaric, Amanita muscaria. Activate to read field notes.">
+          <div class="spec__inner">
+            <div class="spec__face spec__front">
+              <div class="spec__photo">
+                <img src="assets/sp-flyagaric.jpg" alt="Amanita muscaria, the fly agaric, scarlet with white warts" loading="lazy" />
+                <span class="spec__flag">Poisonous</span>
+              </div>
+              <div class="spec__front-body">
+                <h3 class="spec__name">Fly Agaric <span>Amanita muscaria</span></h3>
+                <p class="spec__blurb">The storybook toadstool — scarlet, white-warted and genuinely toxic.</p>
+                <span class="spec__cue">Field notes <span class="spec__cue-icon">&#x21BB;</span></span>
+              </div>
+            </div>
+            <div class="spec__face spec__back">
+              <h3 class="spec__name spec__name--back">Fly Agaric <span>Amanita muscaria</span></h3>
+              <div class="spec__note">
+                <h4>Telltale signs</h4>
+                <ul>
+                  <li>Scarlet-to-orange cap dotted with white warts (rain can wash them off)</li>
+                  <li>White gills, a white skirt-like ring, and a bulbous scaly base</li>
+                  <li>White spore print; no distinctive smell</li>
+                </ul>
+              </div>
+              <div class="spec__note">
+                <h4>Easily confused with</h4>
+                <p><em>Amanita caesarea</em> — and after rain a wart-less red cap can fool you.</p>
+              </div>
+              <div class="spec__note">
+                <h4>From the field</h4>
+                <p>Its toxin is ibotenic acid, not muscarine as is often claimed. Poisonous and bitter — best left standing.</p>
+              </div>
+              <span class="spec__cue spec__cue--back">Flip back <span class="spec__cue-icon">&#x21BA;</span></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Death cap / Amanita -->
+        <article class="spec spec--deadly" tabindex="0" role="button" aria-pressed="false" aria-label="Death cap, Amanita phalloides. Activate to read field notes.">
+          <div class="spec__inner">
+            <div class="spec__face spec__front">
+              <div class="spec__photo">
+                <img src="assets/sp-deathcap.jpg" alt="A pale, deadly Amanita showing ring and sac-like volva" loading="lazy" />
+                <span class="spec__flag">Deadly</span>
+              </div>
+              <div class="spec__front-body">
+                <h3 class="spec__name">Death Cap <span>Amanita phalloides</span></h3>
+                <p class="spec__blurb">The most deadly mushroom on earth — careful ID is everything.</p>
+                <span class="spec__cue">Field notes <span class="spec__cue-icon">&#x21BB;</span></span>
+              </div>
+            </div>
+            <div class="spec__face spec__back">
+              <h3 class="spec__name spec__name--back">Death Cap <span>Amanita phalloides</span></h3>
+              <div class="spec__note">
+                <h4>Telltale signs</h4>
+                <ul>
+                  <li>Smooth greenish-yellow to olive cap, sometimes dark-streaked</li>
+                  <li>White gills and a membranous ring high on the stipe</li>
+                  <li>A large white sac-like volva cupping the bulbous base</li>
+                </ul>
+              </div>
+              <div class="spec__note">
+                <h4>Easily confused with</h4>
+                <p><em>Volvariella speciosa</em>, which also has a prominent volva.</p>
+              </div>
+              <div class="spec__note">
+                <h4>From the field</h4>
+                <p>An estimated half a cap can kill — and the amatoxins survive cooking, freezing and drying.</p>
+              </div>
+              <span class="spec__cue spec__cue--back">Flip back <span class="spec__cue-icon">&#x21BA;</span></span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="fungi__foot">
+        <span class="dotmark dotmark--deadly"></span>
+        Identification is a skill, not a guess. Every Mushroom Fundi forage puts safety first —
+        <a href="#join">come learn it properly</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== The Book ===== -->
+  <section class="book" id="book">
+    <div class="container book__grid">
+      <div class="book__visual">
+        <div class="book__cover">
+          <img src="assets/book-cover.jpg" alt="Field Guide to Mushrooms &amp; other Fungi of South Africa, by Gary B Goldman &amp; Marieka Gryzenhout" />
+        </div>
+        <div class="book__shadow" aria-hidden="true"></div>
+      </div>
+
+      <div class="book__body">
+        <p class="eyebrow eyebrow--green">The Book</p>
+        <h2 class="section-title">Everything Gary knows, in your back pocket.</h2>
+        <p>
+          Years of forest notes, spore prints and hard-won lessons — organised into a
+          richly photographed guide to South African wild mushrooms. Crisp identification
+          images, clear edibility flags, and the stories that make it stick.
+        </p>
+        <ul class="ticks ticks--two">
+          <li>200+ species, fully illustrated</li>
+          <li>Field-ready identification keys</li>
+          <li>Edibility &amp; look-alike warnings</li>
+          <li>Seasonal Cape foraging calendar</li>
+        </ul>
+        <div class="book__actions">
+          <a href="#join" class="btn btn--primary btn--lg">Get the Book</a>
+          <span class="book__price">Photographed across South Africa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery strip ===== -->
+  <!-- Track is populated and shuffled by JS for an endless, ever-changing reel.
+       The figures below act as a no-JS fallback. -->
+  <section class="gallery" aria-label="From the field">
+    <div class="gallery__track" data-gallery>
+      <figure><img src="assets/g-turkeytail.jpg" alt="Bracket fungi climbing a forest trunk" /><figcaption>Bracket fungi · forest trunk</figcaption></figure>
+      <figure><img src="assets/g-inkcap.jpg" alt="A cluster of glistening ink caps" /><figcaption>Ink caps · in the grass</figcaption></figure>
+      <figure><img src="assets/sp-russula.jpg" alt="A vinaceous Russula brittlegill in pine needles" /><figcaption>Brittlegill · Russula sp.</figcaption></figure>
+      <figure><img src="assets/g-earthstar.jpg" alt="An earthstar splayed open on the forest floor" /><figcaption>Earthstar · Geastrum sp.</figcaption></figure>
+      <figure><img src="assets/forest.jpg" alt="Fungi spiralling up a fallen tree in dense forest" /><figcaption>Wild flush · Afromontane forest</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Word from the Forest</p>
+        <h2 class="section-title">Foragers who found their Fundi.</h2>
+      </header>
+
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote>
+            "I arrived nervous about touching anything wild and left able to confidently
+            identify a dozen species. Gary is the real deal."
+          </blockquote>
+          <figcaption><strong>Nadia M.</strong><span>Forage, Tokai Forest</span></figcaption>
+        </figure>
+
+        <figure class="quote">
+          <blockquote>
+            "We met before sunrise and came home with a basket of porcini for breakfast.
+            Worth every early minute — the kids haven't stopped talking about it."
+          </blockquote>
+          <figcaption><strong>James &amp; Thandi</strong><span>Forage, Cape Peninsula</span></figcaption>
+        </figure>
+
+        <figure class="quote">
+          <blockquote>
+            "The book lives in my backpack. It's the only Cape mushroom guide I trust
+            enough to actually eat from."
+          </blockquote>
+          <figcaption><strong>Pieter v.</strong><span>Reader, Stellenbosch</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Join / CTA ===== -->
+  <section class="join" id="join">
+    <div class="container join__inner">
+      <div class="join__copy">
+        <p class="eyebrow eyebrow--green">Join &amp; Forage</p>
+        <h2 class="section-title">Get the next forage dates.</h2>
+        <p>
+          Drop your email to be first to hear when forages open —
+          plus seasonal notes on what's fruiting around the Cape.
+        </p>
+      </div>
+
+      <form class="join__form" onsubmit="return false;">
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" type="email" placeholder="you@example.com" required />
+        <button type="submit" class="btn btn--primary btn--lg">Join the Forage</button>
+        <p class="join__fineprint">No spam — just forest. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="brand__badge brand__badge--light"><img src="assets/logo.png" alt="Mushroom Fundi logo" /></span>
+        <p class="footer__tag">Wild mushroom forages &amp; the Cape field guide.<br />Proudly Cape&nbsp;Town.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Explore">
+        <h4>Explore</h4>
+        <a href="#forage">Book a Forage</a>
+        <a href="#about">About Gary</a>
+        <a href="#offer">What We Do</a>
+        <a href="#fungi">Know Your Fungi</a>
+        <a href="#book">The Book</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Contact">
+        <h4>Get in touch</h4>
+        <a href="https://wa.me/27739362378?text=Hi%20Gary%2C%20I%27d%20like%20to%20book%20a%20Mushroom%20Fundi%20forage.%20Which%20days%20do%20you%20have%20space%3F" target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a href="tel:+27739362378">+27 73 936 2378</a>
+        <a href="#forage">Forage details</a>
+      </nav>
+    </div>
+
+    <div class="container footer__base">
+      <p>© <span id="year">2026</span> Mushroom Fundi · Cape Town</p>
+      <p class="footer__mono">MUSHROOM&nbsp;FUNDI · KNOW&nbsp;YOUR&nbsp;FUNGI</p>
+    </div>
+  </footer>
+
+  <!-- ===== SVG sprite ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="shroom" viewBox="0 0 100 100">
+        <path d="M50 12c-20 0-34 12-34 26 0 4 3 7 8 7h52c5 0 8-3 8-7 0-14-14-26-34-26Z" />
+        <path d="M42 45h16c0 16 3 26 6 33 1 3-1 6-4 6H40c-3 0-5-3-4-6 3-7 6-17 6-33Z" />
+      </symbol>
+      <symbol id="sprout" viewBox="0 0 100 100">
+        <path d="M50 88V46" stroke-width="7" stroke-linecap="round" fill="none" />
+        <path d="M50 52c-14 2-24-6-26-22 16-1 25 7 26 22Z" />
+        <path d="M50 44c12-2 21-12 20-26-14 0-21 11-20 26Z" />
+      </symbol>
+      <symbol id="leaf" viewBox="0 0 100 100">
+        <path d="M22 78C22 44 46 22 80 22c0 34-24 56-58 56Z" />
+        <path d="M30 70C44 56 60 44 74 38" stroke-width="5" stroke-linecap="round" fill="none" />
+      </symbol>
+      <symbol id="ic-book" viewBox="0 0 100 100">
+        <path d="M47 28C39 22 28 20 18 21c-2 0-3 1-3 3v48c0 2 2 4 4 3 9-1 18 1 25 6 1 1 4 1 5 0V29c-1-1-1-1-2-1Z" />
+        <path d="M53 28c8-6 19-8 29-7 2 0 3 1 3 3v48c0 2-2 4-4 3-9-1-18 1-25 6-1 1-4 1-5 0V29c1-1 1-1 2-1Z" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile menu
+    const toggle = document.querySelector('.nav__toggle');
+    const header = document.querySelector('.site-header');
+    toggle.addEventListener('click', () => {
+      const open = header.classList.toggle('nav-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.nav__links a, .nav__cta a').forEach(a =>
+      a.addEventListener('click', () => header.classList.remove('nav-open'))
+    );
+
+    // shrink header on scroll
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // immersive scroll-expand intro: drive --p (0 → 1) from scroll position
+    const immersive = document.querySelector('.immersive');
+    if (immersive) {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      let ticking = false;
+      const updateImmersive = () => {
+        ticking = false;
+        const stage = immersive.offsetHeight - window.innerHeight; // scrollable travel
+        const scrolled = Math.min(Math.max(-immersive.getBoundingClientRect().top, 0), stage);
+        const p = stage > 0 ? scrolled / stage : 1;
+        immersive.style.setProperty('--p', p.toFixed(4));
+        immersive.classList.toggle('is-open', p > 0.92);
+      };
+      if (reduce) {
+        immersive.style.setProperty('--p', '1');
+        immersive.classList.add('is-open');
+      } else {
+        updateImmersive();
+        window.addEventListener('scroll', () => {
+          if (!ticking) { ticking = true; requestAnimationFrame(updateImmersive); }
+        }, { passive: true });
+        window.addEventListener('resize', updateImmersive);
+      }
+    }
+
+    // Know Your Fungi — rotate the species shown on each visit, drawn from the
+    // field guide. Always surfaces something medicinal and something dangerous,
+    // so the "delicious, medicinal, deadly" spread holds. Static cards in the
+    // HTML are the no-JS fallback; here we overwrite them with a fresh set.
+    (function () {
+      const container = document.querySelector('[data-species]');
+      if (!container) return;
+
+      const POOL = [
+        { cat: 'edible', flag: 'Choice edible', img: 'sp-porcini.jpg', name: 'Porcini', latin: 'Boletus edulis',
+          alt: 'Boletus edulis, the porcini, in pine forest',
+          blurb: "The mushroom hunter's delight — meaty, nutty and prized worldwide.",
+          telltale: ['Smooth tan to chestnut, red-brown cap — dry and glossy', 'Barrel-shaped stipe with a raised white net over its upper half', 'White pores age to olive; flesh never bruises blue'],
+          confused: '<em>Boletus reticulatus</em>, <em>B. aereus</em> and the bay bolete — but porcini flesh and pores don’t bruise blue.',
+          fact: 'South African porcini are free of the insect larvae that plague European ones — making ours highly sought after worldwide.' },
+
+        { cat: 'edible', flag: 'Edible', img: 'sp-baybolete.jpg', name: 'Bay Bolete', latin: 'Imleria badia',
+          alt: 'Imleria badia, the bay bolete, in pine needles',
+          blurb: 'A beginner-friendly bolete with a glossy bay-brown cap.',
+          telltale: ['Bay to chestnut cap, sticky when wet, drying to a polished sheen', 'Stipe finely streaked — never a raised net like porcini', 'Pale pores bruise blue-green at a touch'],
+          confused: 'Other boletes — but the blue-bruising pores of young specimens give it away.',
+          fact: 'Those blue stains are just boletol oxidising — a harmless substance found in many boletes.' },
+
+        { cat: 'medicinal', flag: 'Medicinal', img: 'sp-reishi.jpg', name: 'Reishi', latin: 'Ganoderma lucidum',
+          alt: 'Ganoderma lucidum, reishi, a varnished bracket on wood',
+          blurb: 'The lacquered "mushroom of immortality" — woody, and brewed for medicine.',
+          telltale: ['Shiny, varnished crust like lacquered wood — cream to red-chestnut', 'Corky-to-woody bracket, often in overlapping tiers', 'White pore surface browns when bruised; rust-brown spores'],
+          confused: '<em>Ganoderma applanatum</em> and <em>Amauroderma sprucei</em>; <em>G. tsugae</em> and <em>G. curtisii</em> share the varnished look.',
+          fact: 'Called the "King of Herbs" in ancient China — traditionally taken for immunity, inflammation and stress.' },
+
+        { cat: 'edible', flag: 'Choice edible', img: 'g-termite.jpg', name: 'Termite Mushroom', latin: 'Termitomyces clypeatus',
+          alt: 'A large Termitomyces emerging from a termite mound',
+          blurb: "Among Africa's most prized wild edibles — farmed underground by termites.",
+          telltale: ['Brown cap with a sharply pointed umbo (central peak)', 'Cylindrical, lengthwise-grooved stipe; grows densely clustered', 'Stipe tapers into a long root reaching the termite nest'],
+          confused: 'Other <em>Termitomyces</em> and <em>Agaricus</em> species.',
+          fact: 'Termites farm it on underground combs — the mushroom rises on a root-like stalk (pseudorhiza) after the rains.' },
+
+        { cat: 'poison', flag: 'Poisonous', img: 'sp-flyagaric.jpg', name: 'Fly Agaric', latin: 'Amanita muscaria',
+          alt: 'Amanita muscaria, the fly agaric, scarlet with white warts',
+          blurb: 'The storybook toadstool — scarlet, white-warted and genuinely toxic.',
+          telltale: ['Scarlet-to-orange cap dotted with white warts (rain can wash them off)', 'White gills, a white skirt-like ring, and a bulbous scaly base', 'White spore print; no distinctive smell'],
+          confused: '<em>Amanita caesarea</em> — and after rain a wart-less red cap can fool you.',
+          fact: 'Its toxin is ibotenic acid, not muscarine as is often claimed. Poisonous and bitter — best left standing.' },
+
+        { cat: 'deadly', flag: 'Deadly', img: 'sp-deathcap.jpg', name: 'Death Cap', latin: 'Amanita phalloides',
+          alt: 'A pale, deadly Amanita showing ring and sac-like volva',
+          blurb: 'The most deadly mushroom on earth — careful ID is everything.',
+          telltale: ['Smooth greenish-yellow to olive cap, sometimes dark-streaked', 'White gills and a membranous ring high on the stipe', 'A large white sac-like volva cupping the bulbous base'],
+          confused: '<em>Volvariella speciosa</em>, which also has a prominent volva.',
+          fact: 'An estimated half a cap can kill — and the amatoxins survive cooking, freezing and drying.' },
+
+        { cat: 'medicinal', flag: 'Medicinal', img: 'g-turkeytail.jpg', name: 'Turkey Tail', latin: 'Trametes versicolor',
+          alt: 'Trametes versicolor, turkey tail, zoned bracket fungi on a trunk',
+          blurb: "Earth's most-studied medicinal bracket — silky, multi-zoned fans on dead wood.",
+          telltale: ['Thin, leathery fans banded in concentric zones of brown, grey, rust and blue', 'Silky, finely velvety upper surface with a paler outer rim', 'Underside a fine white pore layer — never smooth'],
+          confused: '<em>Stereum ostrea</em>, the "false turkey tail" — but that has a smooth underside with no pores.',
+          fact: 'Rich in antioxidants and the compound PSK; dried and brewed in traditional medicine for immune support.' },
+
+        { cat: 'edible', flag: 'Edible', img: 'wild-coprinus.jpg', name: 'Shaggy Ink Cap', latin: 'Coprinus comatus',
+          alt: 'Coprinus comatus, the shaggy ink cap, on grass',
+          blurb: "The 'lawyer's wig' — a choice edible, but only before it melts into ink.",
+          telltale: ['Tall white, cylindrical cap shaggy with upturned scales', 'Cap blackens and dissolves from the rim upward as it ages', 'White stipe with a loose ring; grows on lawns and disturbed ground'],
+          confused: 'Other ink caps — but the tall, white, shaggy "wig" shape is unmistakable.',
+          fact: 'It auto-digests into black "ink" within hours of picking — cook it the day you find it.' },
+
+        { cat: 'edible', flag: 'Edible', img: 'g-inkcap.jpg', name: 'Mica Cap', latin: 'Coprinellus micaceus',
+          alt: 'Coprinellus micaceus, glistening mica caps in a cluster',
+          blurb: 'Honey-gold clusters dusted with glistening mica-like crystals.',
+          telltale: ['Tawny, bell-shaped cap finely grooved towards the centre', 'Young caps sparkle with a dusting of glistening veil granules', 'Dense clusters on or around buried wood and stumps'],
+          confused: 'Other small <em>Coprinellus</em> ink caps — the mica-like sheen on fresh caps is the giveaway.',
+          fact: 'Those glittering "mica" flecks are fragile veil crystals that rain quickly washes away. Always cook before eating.' },
+
+        // ↓ Species lifted from Gary's field guide — photo + field notes from the book itself.
+        { cat: 'edible', flag: 'Choice edible', img: 'species/card-boletus-aereus.jpg', name: 'Dark Cep', latin: 'Boletus aereus',
+          alt: 'Two dark-capped boletes (Boletus aereus) on the forest floor',
+          blurb: 'The “queen bolete” — a dark, bronze-capped cousin of the porcini, every bit as prized.',
+          telltale: ['Dark sepia cap, almost black when young, lightening with age; velvety surface', 'Thick, fleshy, barrel-shaped stipe; whitish pores ageing to yellow-olive', 'Flesh stays white and never bruises blue'],
+          confused: '<em>Boletus edulis</em> and other ceps — the near-black young cap sets the queen bolete apart.',
+          fact: 'Found under Cape oaks — a sought-after edible, the equal of the classic porcini.' },
+
+        { cat: 'edible', flag: 'Edible', img: 'species/card-parasol.jpg', name: 'White Parasol', latin: 'Macrolepiota zeyheri',
+          alt: 'White parasol mushrooms (Macrolepiota zeyheri) in grass',
+          blurb: 'A tall, stately parasol of Cape grasslands — and a South African native.',
+          telltale: ['Large white umbrella cap breaking into loose brown scales, smooth at the umbo', 'Free, crowded white gills set off from the stipe by a collar', 'Tall stipe carrying a large membranous ring'],
+          confused: 'The poisonous <em>Chlorophyllum molybdites</em> — but that ages to green gills.',
+          fact: 'Found only in South Africa so far — likely native, and a fine wild edible.' },
+
+        { cat: 'edible', flag: 'Edible', img: 'species/card-saffron-milkcap.jpg', name: 'Saffron Milkcap', latin: 'Lactarius deliciosus',
+          alt: 'Saffron milkcaps (Lactarius deliciosus) showing orange gills',
+          blurb: 'The pine-ring milkcap — bleeds bright orange, a favourite of Cape pine forests.',
+          telltale: ['Orange-red cap with concentric zones, fading grey-green with age or rain', 'Decurrent orange gills; carrot-orange milk oozes from any cut', 'Grows under pines, often half-buried in needles'],
+          confused: 'Other milkcaps — but the bright orange (never white) milk is decisive.',
+          fact: 'Its Latin name means “delicious”; the flesh stains green where handled — quite harmless.' },
+
+        { cat: 'edible', flag: 'Choice edible', img: 'species/card-field-mushroom.jpg', name: 'Field Mushroom', latin: 'Agaricus campestris',
+          alt: 'A field mushroom (Agaricus campestris) showing pink-brown gills',
+          blurb: 'The classic wild field mushroom — the supermarket button’s wild ancestor.',
+          telltale: ['Silky white cap, fleshy and dry', 'Gills start rosy pink, darkening to chocolate brown', 'A delicate ring on the white stipe; grows in rings on lawns and pasture'],
+          confused: 'Young <em>Amanita</em> species — but the field mushroom has pink-to-brown gills and never a sac-like volva.',
+          fact: 'A summer-rain favourite that fruits in fairy rings across Cape lawns and pastures.' },
+
+        { cat: 'edible', flag: 'Choice edible', img: 'species/card-the-prince.jpg', name: 'The Prince', latin: 'Agaricus augustus',
+          alt: 'The prince (Agaricus augustus), a large scaly-capped agaric',
+          blurb: 'Majestic by name and nature — a large, almond-scented relative of the field mushroom.',
+          telltale: ['Large creamy cap densely covered in fine brown scales', 'Big hanging ring; gills whitish, ageing to chocolate brown', 'Smells distinctly of almonds or marzipan'],
+          confused: 'Yellow-staining agarics that smell of ink — the Prince smells sweetly of almonds instead.',
+          fact: 'One of the largest and finest edible agarics — found in rich soil, parks and compost.' },
+
+        { cat: 'edible', flag: 'Edible', img: 'species/card-slippery-jack.jpg', name: 'Slippery Jack', latin: 'Suillus luteus',
+          alt: 'A slippery jack (Suillus luteus) showing yellow pores and ring',
+          blurb: 'The “sticky bun” of the pine forest — peel the slimy skin and it’s a fine edible.',
+          telltale: ['Smooth, shiny brown cap, slippery and viscid when wet', 'Tiny yellow pores beneath; a white membranous ring on the stipe', 'Stipe dotted with glandular specks; always under pines'],
+          confused: 'Other slippery boletes — the prominent white ring and tiny yellow pores mark the slippery jack.',
+          fact: 'Peel off the gluey cap skin before cooking — it can upset some stomachs otherwise.' },
+
+        { cat: 'edible', flag: 'Edible', img: 'species/card-blusher.jpg', name: 'The Blusher', latin: 'Amanita rubescens',
+          alt: 'The blusher (Amanita rubescens), a warted pink-brown Amanita',
+          blurb: 'Edible once cooked — but a dead ringer for its deadly cousins, so for experts only.',
+          telltale: ['Russet to rose-brown cap flecked with greyish-pink warts', 'Flesh and gills slowly stain wine-pink where cut or bruised', 'Striate, pendulous ring; warty bands round the bulbous base'],
+          confused: 'The deadly <em>Amanita pantherina</em> — leave it unless certain of the pink-blushing flesh.',
+          fact: 'Named for the way it “blushes” pink when handled — and toxic raw, so always thoroughly cooked.' },
+
+        { cat: 'edible', flag: 'Edible', img: 'species/card-wood-ear.jpg', name: 'Wood Ear', latin: 'Auricularia auricula-judae',
+          alt: 'Wood ear fungi (Auricularia auricula-judae) on a branch',
+          blurb: 'The jelly “ear” of the woods — the black fungus of Asian kitchens, growing wild here.',
+          telltale: ['Ear-shaped, rubbery-gelatinous brackets on dead branches', 'Greyish to reddish-brown, minutely hairy and veined like an ear', 'Shrivels hard when dry, swelling again with rain'],
+          confused: 'Other jelly fungi — the cupped, ear-like shape on wood is unmistakable.',
+          fact: 'Nearly flavourless alone, it’s prized for its texture in soups and stir-fries the world over.' },
+
+        { cat: 'deadly', flag: 'Deadly', img: 'species/card-panther-cap.jpg', name: 'Panther Cap', latin: 'Amanita pantherina',
+          alt: 'The deadly panther cap (Amanita pantherina) with white warts',
+          blurb: 'The panther — a beautiful warted woodland Amanita that is deadly poisonous.',
+          telltale: ['Grey-brown cap studded with white pyramidal warts in rings', 'Distinctly grooved (striate) cap margin', 'White gills; bulbous base ringed with collar-like volva ridges'],
+          confused: 'The edible blusher (<em>A. rubescens</em>) — but the panther’s flesh never blushes pink.',
+          fact: 'Carries the fly agaric’s toxins in greater force — never to be tasted.' },
+
+        { cat: 'poison', flag: 'Poisonous', img: 'species/card-green-parasol.jpg', name: 'False Parasol', latin: 'Chlorophyllum molybdites',
+          alt: 'False parasol (Chlorophyllum molybdites) on a lawn',
+          blurb: 'The “vomiter” — a lawn parasol that’s the commonest cause of mushroom poisoning.',
+          telltale: ['Large white cap with coarse amber-brown scales', 'Stipe widening to a bulb; a movable ring', 'Mature gills turn dull green — often only the day after it appears'],
+          confused: 'Edible parasols (<em>Macrolepiota</em>) — but those keep white gills; green gills mean poison.',
+          fact: 'Looks like a choice parasol and grows on lawns — which is exactly why it poisons so many people.' },
+
+        { cat: 'poison', flag: 'Poisonous', img: 'species/card-jack-o-lantern.jpg', name: 'Jack-o’-Lantern', latin: 'Omphalotus olearius',
+          alt: 'Bright orange jack-o-lantern mushrooms (Omphalotus olearius) on wood',
+          blurb: 'Glowing orange and gilled — a toxic chanterelle look-alike that shines in the dark.',
+          telltale: ['Vivid orange, funnel-shaped caps clustered on wood', 'True, sharp-edged gills running down the stem (not blunt ridges)', 'Gills are faintly bioluminescent — they glow in the dark'],
+          confused: 'The edible chanterelle — but that has blunt forked ridges, not true gills, and grows from soil.',
+          fact: 'Its gills glow an eerie green at night — but a bite brings severe cramps and sickness.' },
+
+        { cat: 'poison', flag: 'Poisonous', img: 'species/card-sulphur-tuft.jpg', name: 'Sulphur Tuft', latin: 'Hypholoma fasciculare',
+          alt: 'Sulphur tuft (Hypholoma fasciculare), yellow clustered toadstools',
+          blurb: 'Bright sulphur-yellow tufts crowding dead wood — common, bitter and toxic.',
+          telltale: ['Sulphur-yellow caps, tawny-orange at the centre', 'Gills yellow, ageing through greenish to purplish-black', 'Dense clusters on stumps and dead wood; very bitter'],
+          confused: 'Edible woodland mushrooms on stumps — but the sulphur colour and bitter taste give it away.',
+          fact: 'One of the most common toadstools on dead wood worldwide — and reliably makes you ill.' },
+
+        { cat: 'deadly', flag: 'Deadly', img: 'species/card-brown-rollrim.jpg', name: 'Brown Roll-rim', latin: 'Paxillus involutus',
+          alt: 'Brown roll-rim (Paxillus involutus), a tan funnel-shaped cap',
+          blurb: 'The “time-bomb toadstool” — once eaten freely in Europe, now known to be deadly.',
+          telltale: ['Dull-brown funnel cap with a strongly inrolled, woolly margin', 'Decurrent gills that bruise and brown at a touch', 'Grows in forest leaf litter; slimy when wet'],
+          confused: 'Edible funnel-shaped mushrooms — but the inrolled rim and browning gills mark the roll-rim.',
+          fact: 'Its toxin builds an immune reaction over years — eventually triggering a fatal response even in long-time eaters.' },
+
+        { cat: 'medicinal', flag: 'Medicinal', img: 'species/card-artists-bracket.jpg', name: 'Artist’s Bracket', latin: 'Ganoderma applanatum',
+          alt: 'Artist’s bracket (Ganoderma applanatum), a woody shelf fungus on a log',
+          blurb: 'The “artist’s conk” — a giant woody shelf you can literally draw on.',
+          telltale: ['Large, hard, flat bracket with a dull-brown, concentrically grooved crust', 'White pore underside that bruises brown at a touch', 'Sessile and shelved on broadleaved trunks; can reach 75cm across'],
+          confused: 'Reishi (<em>Ganoderma lucidum</em>) — but the artist’s bracket has a matt, unvarnished crust.',
+          fact: 'Scratch the white underside and it bruises permanent brown — etch a picture and it lasts for years.' },
+      ];
+
+      const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+      const pickN = (arr, n) => shuffle(arr.slice()).slice(0, n);
+
+      const COUNT = Math.min(6, POOL.length);
+      const picks = [];
+      const med = POOL.filter(s => s.cat === 'medicinal');
+      const danger = POOL.filter(s => s.cat === 'poison' || s.cat === 'deadly');
+      if (med.length) picks.push(pickN(med, 1)[0]);          // always something medicinal
+      if (danger.length) picks.push(pickN(danger, 1)[0]);    // always something dangerous
+      const chosen = new Set(picks);
+      picks.push(...pickN(POOL.filter(s => !chosen.has(s)), COUNT - picks.length));
+      shuffle(picks);
+
+      const render = (s) => `
+        <article class="spec spec--${s.cat}" tabindex="0" role="button" aria-pressed="false" aria-label="${s.name}, ${s.latin}. Activate to read field notes.">
+          <div class="spec__inner">
+            <div class="spec__face spec__front">
+              <div class="spec__photo">
+                <img src="assets/${s.img}" alt="${s.alt}" loading="lazy" />
+                <span class="spec__flag">${s.flag}</span>
+              </div>
+              <div class="spec__front-body">
+                <h3 class="spec__name">${s.name} <span>${s.latin}</span></h3>
+                <p class="spec__blurb">${s.blurb}</p>
+                <span class="spec__cue">Field notes <span class="spec__cue-icon">&#x21BB;</span></span>
+              </div>
+            </div>
+            <div class="spec__face spec__back">
+              <h3 class="spec__name spec__name--back">${s.name} <span>${s.latin}</span></h3>
+              <div class="spec__note">
+                <h4>Telltale signs</h4>
+                <ul>${s.telltale.map(t => `<li>${t}</li>`).join('')}</ul>
+              </div>
+              <div class="spec__note">
+                <h4>Easily confused with</h4>
+                <p>${s.confused}</p>
+              </div>
+              <div class="spec__note">
+                <h4>From the field</h4>
+                <p>${s.fact}</p>
+              </div>
+              <span class="spec__cue spec__cue--back">Flip back <span class="spec__cue-icon">&#x21BA;</span></span>
+            </div>
+          </div>
+        </article>`;
+
+      container.innerHTML = picks.map(render).join('');
+    })();
+
+    // flip cards (Know Your Fungi) — click or keyboard to reveal field notes
+    document.querySelectorAll('.spec[role="button"]').forEach(card => {
+      const flip = () => {
+        const flipped = card.classList.toggle('is-flipped');
+        card.setAttribute('aria-pressed', String(flipped));
+      };
+      card.addEventListener('click', flip);
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+          e.preventDefault();
+          flip();
+        }
+      });
+    });
+
+    // endless, ever-changing field reel — shuffled fresh on every load
+    (function () {
+      const track = document.querySelector('[data-gallery]');
+      if (!track) return;
+
+      // Pool of field shots; the reel draws from these in a new random order each visit.
+      const pool = [
+        { src: 'g-turkeytail.jpg',  cap: 'Bracket fungi · forest trunk' },
+        { src: 'g-inkcap.jpg',      cap: 'Ink caps · in the grass' },
+        { src: 'sp-russula.jpg',    cap: 'Brittlegill · Russula sp.' },
+        { src: 'g-earthstar.jpg',   cap: 'Earthstar · Geastrum sp.' },
+        { src: 'forest.jpg',        cap: 'Wild flush · Afromontane forest' },
+        { src: 'g-termite.jpg',     cap: 'Termite mushroom · Termitomyces' },
+        { src: 'sp-baybolete.jpg',  cap: 'Bay bolete · Imleria badia' },
+        { src: 'sp-porcini.jpg',    cap: 'Porcini · Boletus edulis' },
+        { src: 'sp-reishi.jpg',     cap: 'Reishi · Ganoderma lucidum' },
+        { src: 'sp-flyagaric.jpg',  cap: 'Fly agaric · Amanita muscaria' },
+        // ↓ Gary's own field photographs, pulled from the Drive archive.
+        { src: 'wild-cyathus.jpg',       cap: "Bird's nest fungi · Cyathus striatus" },
+        { src: 'wild-coprinus.jpg',      cap: 'Shaggy ink cap · Coprinus comatus' },
+        { src: 'wild-boletus-loosei.jpg', cap: 'Wild bolete · Boletus loosei' },
+      ];
+
+      // How many shots to feature per visit. With a pool bigger than this,
+      // each visit draws a different handful — so you genuinely see new
+      // photographs every time, not just the same set reshuffled. Add more
+      // photos to `pool` above (and drop the files in assets/) and the
+      // variety grows automatically.
+      const VISIBLE = 8;
+
+      // Fisher–Yates shuffle for an even, genuinely random order...
+      const order = pool.slice();
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      // ...then feature just the first slice of the shuffled pool this visit.
+      const picks = order.slice(0, Math.min(VISIBLE, order.length));
+
+      const makeGroup = (hidden) => {
+        const group = document.createElement('div');
+        group.className = 'gallery__group';
+        if (hidden) group.setAttribute('aria-hidden', 'true');
+        picks.forEach(item => {
+          const fig = document.createElement('figure');
+          const img = document.createElement('img');
+          img.src = 'assets/' + item.src;
+          img.alt = hidden ? '' : item.cap;
+          img.loading = 'lazy';
+          const cap = document.createElement('figcaption');
+          cap.textContent = item.cap;
+          fig.append(img, cap);
+          group.append(fig);
+        });
+        return group;
+      };
+
+      // Two identical groups → translateX(-50%) loops with no seam or end.
+      track.replaceChildren(makeGroup(false), makeGroup(true));
+      track.classList.add('gallery__track--js');
+
+      // Vary the pace a touch each visit so it never feels canned.
+      track.style.animationDuration = (72 + Math.random() * 20).toFixed(1) + 's';
+    })();
+
+    // Hero feature shot — a different wild mushroom greets you on every visit.
+    // All shots here are defensible to headline a forager's site: choice edible
+    // boletes and well-known medicinals, each tagged with its true edibility.
+    (function () {
+      const img = document.querySelector('[data-hero-img]');
+      const tag = document.querySelector('[data-hero-tag]');
+      if (!img || !tag) return;
+
+      const shots = [
+        { src: 'hero-porcini.jpg', latin: 'Boletus edulis',       name: 'Porcini',     dot: 'edible',    alt: 'A wild porcini (Boletus edulis) in Cape pine forest' },
+        { src: 'sp-porcini.jpg',   latin: 'Boletus edulis',       name: 'King bolete', dot: 'edible',    alt: 'A king bolete pushing up through the forest floor' },
+        { src: 'sp-baybolete.jpg', latin: 'Imleria badia',        name: 'Bay bolete',  dot: 'edible',    alt: 'A bay bolete among the pine needles' },
+        { src: 'sp-reishi.jpg',    latin: 'Ganoderma lucidum',    name: 'Reishi',      dot: 'medicinal', alt: 'A reishi bracket on dead wood' },
+        { src: 'g-turkeytail.jpg', latin: 'Trametes versicolor',  name: 'Turkey tail', dot: 'medicinal', alt: 'Turkey tail bracket fungi climbing a trunk' },
+      ];
+
+      const pick = shots[Math.floor(Math.random() * shots.length)];
+      img.src = 'assets/' + pick.src;
+      img.alt = pick.alt;
+      tag.innerHTML = '<span class="dotmark dotmark--' + pick.dot + '"></span>' + pick.latin + ' · ' + pick.name;
+    })();
+
+    // Species ribbon — every mushroom in Gary's field guide scrolls past, in a
+    // fresh random order each visit. Names extracted straight from the book.
+    (function () {
+      const track = document.querySelector('[data-marquee]');
+      if (!track) return;
+
+      const SPECIES = "Amanita aureofloccosa|Amanita excelsa|Amanita foetidissima|Amanita mappa|Amanita muscaria|Amanita pantherina|Amanita phalloides|Amanita praeclara|Amanita rubescens|Amanita veldiei|Agaricus arvensis|Agaricus augustus|Agaricus bitorquis|Agaricus bisporus|Agaricus campestris|Agaricus diminutivus|Agaricus crocopeplus|Agaricus semotus|Agaricus placomyces|Agaricus silvaticus|Agaricus xanthodermus|Leucoagaricus bisporus|Coniolepiota spongodes|Leucoagaricus leucothites|Leucocoprinus birnbaumii|Leucoagaricus rubrotinctus|Leucocoprinus fragilissimus|Macrolepiota zeyheri|Chlorophyllum molybdites|Bolbitius titubans|Panaeolus subbalteatus|Panaeolina foenisecii|Hebeloma crustuliniforme|Laccaria laccata|Hygrocybe chlorophana|Laccaria tortilis|Hygrocybe conica|Gymnopus androseceus|Marasmiellus candidus|Marasmius bekolacongoli|Marasmius haematocephalus|Marasmius siccus|Marasmius rotula|Cruentomycena viscidocruenta|Amparoina spinosissima|Cyptotrama asprata|Hymenopellis radicata|Pluteus salicinus|Pluteus romellii|Coprinellus disseminatus|Coprinellus heptemerus|Coprinellus domesticus|Coprinellus micaceus|Coprinopsis picacea|Coprinopsis nivea|Coprinus comatus|Agrocybe pediades|Gymnopilus junonius|Omphalotus olearius|Leratiomyces ceres|Deconica coprophila|Hypholoma fasciculare|Paxillus involutus|Heliocybe sulcata|Xanthagaricus luteolosporus|Lentinus sajor-caju|Lentinus stuppeus|Lentinus strigosus|Neolentinus lepideus|Lentinus velutinus|Lactarius deliciosus|Lactarius hepaticus|Russula capensis|Russula sardonia|Russula sororia|Russula xerampelina|Clitocybe nuda|Lepista sordida|Lepista caffrorum|Macrocybe lobayensis|Tricholoma albobrunneum|Tricholoma saponaceum|Tricholomopsis rutilans|Termitomyces microcarpus|Termitomyces clypeatus|Termitomyces reticulatus|Termitomyces schimperi|Termitomyces sagittiformis|Termitomyces umkowaan|Campanella capensis|Crepidotus mollis|Crepidotus variabilis|Schizophyllum commune|Anthracophyllum archeri|Aureoboletus gentilis|Boletus aereus|Boletus edulis|Boletus reticulatus|Imleria badia|Leccinum duriusculum|Xerocomellus chrysenteron|Buchwaldoboletus hemichrysus|Gyroporus castaneus|Suillus bellinii|Suillus bovinus|Suillus granulatus|Suillus luteus|Phlebopus sudanicus|Amauroderma rude|Amauroderma sprucei|Favolaschia thwaitesii|Lentinus arcularius|Lignosus sacer|Microporus xanthopus|Picipes badius|Fistulina africana|Phellinus gilvus|Phellinus rimosus|Daedalea quercina|Laetiporus baudonii|Laetiporus sulphureus|Phaeolus schweinitzii|Rhodofomitopsis lilacinogilva|Ganoderma applanatum|Ganoderma lucidum|Daedaleopsis confragosa|Hexagonia tenuis|Lenzites betulina|Pycnoporus sanguineus|Trametes cingulata|Trametes elegans|Trametes gibbosa|Trametes versicolor|Chondrostereum purpureum|Serpula himantioides|Cymatoderma elegans|Laxitextum bicolor|Stereum hirsutum|Stereum ostrea|Thelephora terrestris|Cyathus olla|Cyathus stercoreus|Cyathus striatus|Sphaerobolus stellatus|Battarrea phalloides|Podaxis pistillaris|Tulostoma albicans|Lycoperdon pratense|Lycoperdon perlatum|Pisolithus tinctorius|Scleroderma citrinum|Geastrum fornicatum|Geastrum hieronymi|Geastrum kotlabae|Geastrum pectinatum|Geastrum schmidelii|Geastrum schweinitzii|Geastrum triplex|Myriostoma coliforme|Aseroë rubra|Clathrus archeri|Clathrus transvaalensis|Blumenavia angolensis|Ileodictyon gracile|Itajahya galericulata|Itajahya rosea|Lysurus corallocephalus|Mutinus caninus|Phallus duplicatus|Phallus rubicundus|Clavulinopsis luteoalba|Pterula subulata|Ramaria formosa|Calocera cornea|Dacryopinax spathularia|Sebacina schweinitzii|Phaeotremella foliacea|Sirobasidium magnum|Tremella fuciformis|Tremella mesenterica|Auricularia auricula-judae|Auricularia delicata|Auricularia polytricha|Helvella crispa|Helvella lacunosa|Morchella elata|Kalaharituber pfeilii|Tuber melanosporum|Daldinia concentrica|Isaria sinclarii|Poronia oedipus|Xylaria hypoxylon|Xylaria polymorpha|Peziza vesiculosa|Scutellinia scutellata|Anthracobia melaloma|Chlorociboria aeruginosa".split('|');
+
+      // Fisher–Yates shuffle — a fresh order each visit.
+      for (let i = SPECIES.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [SPECIES[i], SPECIES[j]] = [SPECIES[j], SPECIES[i]];
+      }
+
+      const makeGroup = () => {
+        const g = document.createElement('div');
+        g.className = 'marquee__group';
+        SPECIES.forEach(name => {
+          const s = document.createElement('span');
+          s.className = 'marquee__sp';
+          s.textContent = name;
+          const d = document.createElement('span');
+          d.className = 'dot';
+          d.innerHTML = '&bull;';
+          g.append(s, d);
+        });
+        return g;
+      };
+
+      // Two identical groups → translateX(-50%) loops seamlessly.
+      track.replaceChildren(makeGroup(), makeGroup());
+
+      // Hold a constant visual speed (~55px/s) no matter how many names there are.
+      requestAnimationFrame(() => {
+        const groupWidth = track.scrollWidth / 2;
+        if (groupWidth > 0) track.style.animationDuration = Math.round(groupWidth / 55) + 's';
+      });
+    })();
+
+    // Ambient spores — page-anchored drift. Spread across the whole document
+    // height and seeded once, so they ride with the page and you can scroll
+    // past them (rather than being pinned to the viewport).
+    (function () {
+      const layer = document.querySelector('.ambient');
+      if (!layer) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const rand = (a, b) => a + Math.random() * (b - a);
+      const build = () => {
+        const docH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+        const screens = Math.max(1, docH / window.innerHeight);
+        const count = Math.min(220, Math.round(screens * 26)); // ~26 spores per screenful
+        const frag = document.createDocumentFragment();
+
+        for (let i = 0; i < count; i++) {
+          const span = document.createElement('span');
+          const roll = Math.random();
+          if (roll < 0.12) span.className = 's-ring';        // occasional pine ring
+          else if (roll < 0.24) span.className = 's-green';  // occasional green spore
+          const ring = span.className === 's-ring';
+          const size = ring ? rand(16, 28) : rand(9, 18);
+
+          span.style.cssText =
+            `--x:${rand(0, 100).toFixed(2)}%;` +
+            `--y:${rand(-2, 100).toFixed(2)}%;` +
+            `--s:${size.toFixed(1)}px;` +
+            `--d:${rand(26, 46).toFixed(1)}s;` +
+            `--delay:-${rand(0, 46).toFixed(1)}s;` +   // negative → already mid-drift on load
+            `--drift:${rand(-16, 16).toFixed(0)}px;` +
+            `--fall:${rand(26, 46).toFixed(0)}vh;` +   // short local fall before looping
+            `--o:${rand(0.3, 0.6).toFixed(2)};`;
+          frag.appendChild(span);
+        }
+        layer.replaceChildren(frag);
+      };
+
+      build();
+      // Rebuild if the page height changes a lot (e.g. orientation / big resize).
+      let rw;
+      window.addEventListener('resize', () => { clearTimeout(rw); rw = setTimeout(build, 400); }, { passive: true });
+    })();
+
+    // reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('[data-reveal], .card, .quote, .section-head, .about__body, .about__media, .book__visual, .book__body, .join__inner, .spec, .fact, .forage__book, .hero__copy, .hero__media')
+      .forEach(el => { el.classList.add('reveal'); io.observe(el); });
+  </script>
+</body>
+</html>
