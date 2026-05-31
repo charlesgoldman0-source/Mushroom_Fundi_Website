@@ -41,6 +41,9 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  /* Stop the page from rubber-band "overscrolling" past the footer on phones —
+     it should come to rest at the bottom banner, not bounce into empty space. */
+  overscroll-behavior-y: none;
   position: relative; /* containing block for the page-anchored ambient spores */
 }
 
@@ -606,7 +609,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   -webkit-backface-visibility: hidden; backface-visibility: hidden;
   display: flex; flex-direction: column;
-  transition: border-color 0.4s, box-shadow 0.4s;
+  transition: border-color 0.4s, box-shadow 0.4s, visibility 0s linear 0.35s;
 }
 .spec__face::before {
   content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 4;
@@ -617,6 +620,16 @@ a { color: inherit; text-decoration: none; }
   box-shadow: 0 30px 54px -30px rgba(0,0,0,0.85);
 }
 .spec__back { transform: rotateY(180deg); }
+
+/* Hard guarantee on top of backface-visibility: hide whichever face is turned
+   away. iOS Safari (and some mobile Blink builds) ignore backface-visibility on
+   faces that also use overflow:hidden + border-radius, so the front's label
+   ("Deadly", "Poisonous"…) bled through the back mirror-reversed. The visibility
+   swap is delayed to the flip's midpoint (0.35s of the 0.7s turn), when the
+   receding face is edge-on and invisible anyway — so the swap is never seen. */
+.spec__back { visibility: hidden; }
+.spec.is-flipped .spec__front { visibility: hidden; }
+.spec.is-flipped .spec__back { visibility: visible; }
 
 /* front — full specimen on a field-guide plate (nothing cropped) */
 .spec__photo {
@@ -914,4 +927,6 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
+  /* flip is instant here, so swap the card faces instantly too (no 0.35s lag) */
+  .spec__face { transition-delay: 0s !important; }
 }
