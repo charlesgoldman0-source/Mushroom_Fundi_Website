@@ -16,3 +16,6 @@ token*.json
 .DS_Store
 Thumbs.db
 *.log
+
+# Large source photos (originals); optimised versions live in assets/
+assets/Porcini Powder Product/

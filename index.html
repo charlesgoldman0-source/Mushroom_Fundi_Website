@@ -17,6 +17,10 @@
   <!-- ===== Ambient spores (page-anchored, gently drifting — populated by JS) ===== -->
   <div class="ambient" aria-hidden="true"></div>
 
+  <!-- ===== Film grain + vignette texture (fixed overlay) ===== -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
   <!-- ===== Header ===== -->
   <header class="site-header" id="top">
     <div class="container nav">
@@ -31,6 +35,7 @@
         <a href="#offer">What We Do</a>
         <a href="#fungi">Know Your Fungi</a>
         <a href="#book">The Book</a>
+        <a href="#ask">Ask Gary</a>
         <a href="#testimonials">Reviews</a>
       </nav>
 
@@ -50,12 +55,15 @@
       <div class="hero__glow"></div>
     </div>
 
+    <span class="hero__sidelabel" aria-hidden="true">Est. Cape Town · Wild Mushroom Co.</span>
+
     <div class="container hero__inner">
       <div class="hero__copy">
-        <p class="eyebrow eyebrow--green">Cape Town · Wild Mushroom Company</p>
+        <p class="hero__index"><span class="hero__no">Nº 001</span> The Forager's Field Company</p>
         <h1 class="hero__title">
-          Know your <span class="ital">mushrooms.</span><br />
-          Trust the <span class="green">Fundi.</span>
+          <span class="hero__line"><span>Know your</span></span>
+          <span class="hero__line"><span class="ital">mushrooms.</span></span>
+          <span class="hero__line"><span>Trust the <span class="green">Fundi.</span></span></span>
         </h1>
         <p class="hero__lede">
           Gary Goldman has spent a lifetime among the fynbos and forest floor — learning
@@ -77,9 +85,16 @@
       </div>
 
       <figure class="hero__media">
-        <div class="hero__photo">
-          <img src="assets/hero-porcini.jpg" alt="A wild porcini (Boletus edulis) growing in Cape pine forest" data-hero-img />
-          <span class="hero__tag" data-hero-tag><span class="dotmark dotmark--edible"></span>Boletus edulis · Porcini</span>
+        <div class="hero__frame">
+          <span class="hero__corner hero__corner--tl" aria-hidden="true"></span>
+          <span class="hero__corner hero__corner--tr" aria-hidden="true"></span>
+          <span class="hero__corner hero__corner--bl" aria-hidden="true"></span>
+          <span class="hero__corner hero__corner--br" aria-hidden="true"></span>
+          <span class="hero__plate" aria-hidden="true">Plate I</span>
+          <div class="hero__photo">
+            <img src="assets/hero-porcini.jpg" alt="A wild porcini (Boletus edulis) growing in Cape pine forest" data-hero-img />
+            <span class="hero__tag" data-hero-tag><span class="dotmark dotmark--edible"></span><span class="sci">Boletus edulis</span> · Porcini</span>
+          </div>
         </div>
         <div class="hero__photo-glow" aria-hidden="true"></div>
       </figure>
@@ -170,9 +185,9 @@
         <h2 class="section-title">A lifetime spent reading the forest floor.</h2>
         <p>
           In Cape Town slang, a <em>fundi</em> is someone who truly knows their craft.
-          Gary Goldman earned the name the hard way — decades of dawn walks through pine
-          forests and wild indigenous forest, his two Jack Russells, Jack and Russell, trotting
-          at his heels, learning to tell a prized porcini from a dangerous pretender.
+          Gary Goldman earned the name the hard way — decades of dawn walks through pine,
+          oak, poplar and wild indigenous forests, his two Jack Russells, Jack and Russell,
+          trotting at his heels, learning to tell a prized porcini from a dangerous pretender.
         </p>
         <p>
           What began as a personal obsession became a mission: to take the fear and
@@ -189,6 +204,26 @@
 
         <a href="#offer" class="link-arrow">See what we do <span>&rarr;</span></a>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== Enchantment — cinematic interlude (Gary's field notes) ===== -->
+  <section class="spell" aria-label="From Gary's field notes">
+    <div class="spell__bg" aria-hidden="true"></div>
+    <div class="spell__veil" aria-hidden="true"></div>
+    <div class="container spell__inner">
+      <p class="spell__eyebrow">From the field notes</p>
+      <blockquote class="spell__quote">
+        <span class="spell__line">There's a silence the forest keeps</span>
+        <span class="spell__line">for those who rise early enough to earn it.</span>
+        <span class="spell__line">You turn over the pine needles half-expecting nothing —</span>
+        <span class="spell__line">and then there it is. Your <em>first wild porcini,</em></span>
+        <span class="spell__line">fat and certain, pushing up through the dark earth</span>
+        <span class="spell__line">as though it had been waiting all season for you.</span>
+        <span class="spell__line spell__line--swell">A quiet enchantment comes over you —</span>
+        <span class="spell__line">old as the forest, and you never quite shake it.</span>
+      </blockquote>
+      <p class="spell__sig">— Gary Goldman, <span>the Fundi</span></p>
     </div>
   </section>
 
@@ -239,8 +274,9 @@
           <div class="card__icon"><svg viewBox="0 0 100 100"><use href="#ic-book" /></svg></div>
           <h3>The Field Guide</h3>
           <p>
-            <em>The Mushroom Fundi</em> — a beautifully photographed guide to the Cape's
-            wild fungi, distilled from 25&nbsp;years on the trail.
+            <em>The Mushroom Fundi Field Guide to Mushrooms &amp; other Fungi of South
+            Africa</em> — a beautifully photographed guide to the Cape's wild fungi,
+            distilled from 25&nbsp;years on the trail.
           </p>
           <span class="card__meta">Available now</span>
         </article>
@@ -529,8 +565,58 @@
           <li>Seasonal Cape foraging calendar</li>
         </ul>
         <div class="book__actions">
-          <a href="#join" class="btn btn--primary btn--lg">Get the Book</a>
+          <a href="https://wa.me/27739362378?text=Hi%20Gary%2C%20I%27d%20like%20to%20get%20a%20copy%20of%20the%20Mushroom%20Fundi%20field%20guide.%20How%20can%20I%20buy%20it%3F"
+             target="_blank" rel="noopener" class="btn btn--primary btn--lg">Get the Book</a>
           <span class="book__price">Photographed across South Africa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pure Porcini Powder — Mr Porcini product ===== -->
+  <section class="ppp" id="porcini">
+    <div class="container ppp__grid">
+      <div class="ppp__visual" data-reveal>
+        <div class="ppp__stage">
+          <div class="ppp__product">
+            <img src="assets/ppp-packet.jpg" alt="Mr Porcini — Pure Porcini Powder, 50g pack" loading="lazy" />
+          </div>
+          <span class="ppp__shadow" aria-hidden="true"></span>
+        </div>
+        <span class="ppp__logo"><img src="assets/mr-porcini-logo.jpg" alt="Mr Porcini logo" /></span>
+      </div>
+
+      <div class="ppp__body" data-reveal>
+        <p class="eyebrow eyebrow--amber">From the forager's pantry</p>
+        <h2 class="section-title">Mr&nbsp;Porcini — Pure Porcini Powder.</h2>
+        <p class="ppp__lede">
+          Wild Cape porcini, dried and milled to an intense powder. A single spoonful brings
+          deep, savoury, earthy umami to anything you cook — no fresh mushrooms required.
+        </p>
+
+        <ul class="ppp__facts">
+          <li>
+            <span class="ppp__fact-k">Pure, and nothing else</span>
+            <span class="ppp__fact-v">Every 100&nbsp;g is milled from a full kilogram of fresh <em>Boletus edulis</em> — dried, ground and sieved.</span>
+          </li>
+          <li>
+            <span class="ppp__fact-k">Use it on</span>
+            <span class="ppp__fact-v">Risotto, casseroles, soups, sauces, soufflés, marinades and stews — or rub straight into meat, poultry and fish.</span>
+          </li>
+          <li>
+            <span class="ppp__fact-k">Taste</span>
+            <span class="ppp__fact-v">A pungent, woody, natural umami — rich and unmistakably porcini.</span>
+          </li>
+        </ul>
+
+        <div class="ppp__actions">
+          <a class="btn btn--whatsapp btn--lg"
+             href="https://wa.me/27739362378?text=Hi%20Gary%2C%20I%27d%20like%20to%20order%20Mr%20Porcini%20Pure%20Porcini%20Powder.%20Could%20you%20let%20me%20know%20how%3F"
+             target="_blank" rel="noopener">
+            <svg class="btn__wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.2A12.8 12.8 0 0 0 4.9 22.5L3.2 28.8l6.5-1.7A12.8 12.8 0 1 0 16 3.2Zm0 23.3a10.5 10.5 0 0 1-5.3-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.5 10.5 0 1 1 16 26.5Zm5.8-7.8c-.3-.2-1.9-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.6 8.6 0 0 1-2.5-1.6 9.5 9.5 0 0 1-1.8-2.2c-.2-.3 0-.5.1-.7l.5-.6.4-.6a.6.6 0 0 0 0-.6c0-.2-.7-1.7-1-2.3s-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.2 6.2 0 0 0 1.3 3.3 14.3 14.3 0 0 0 5.5 4.9c2 .8 2.7.9 3.7.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c0-.2-.3-.3-.6-.4Z"/></svg>
+            Order Pure Porcini Powder
+          </a>
+          <span class="ppp__weight">Nett weight 50&nbsp;g · Product of Cape&nbsp;Town</span>
         </div>
       </div>
     </div>
@@ -585,6 +671,111 @@
     </div>
   </section>
 
+  <!-- ===== Ask the Fundi (community Q&A) ===== -->
+  <!-- Board + filters render from JS (data seeded in the script below, or pulled
+       live from Supabase if configured). The two articles here are a no-JS
+       fallback so the section is never empty. -->
+  <section class="ask" id="ask">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow eyebrow--green">Ask the Fundi</p>
+        <h2 class="section-title">Got a question? Gary's likely answered it.</h2>
+        <p class="section-sub">
+          Search the field desk first — chances are it's already here. Still stuck?
+          Send it through and Gary answers it himself.
+        </p>
+      </header>
+
+      <div class="ask__layout">
+        <!-- The "side tab": search + topic filters + ask CTA -->
+        <aside class="ask__side" data-reveal>
+          <div class="ask__search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 0 1 5.96 12.05l4.24 4.25-1.4 1.4-4.25-4.24A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
+            <input type="search" data-ask-search placeholder="Search the questions…" aria-label="Search past questions" />
+          </div>
+
+          <nav class="ask__filters" data-ask-filters aria-label="Filter questions by topic">
+            <button class="ask__filter is-active" data-cat="all" type="button">All questions</button>
+            <button class="ask__filter" data-cat="forage" type="button">On the forage</button>
+            <button class="ask__filter" data-cat="safety" type="button">Safety &amp; ID</button>
+            <button class="ask__filter" data-cat="cooking" type="button">Cooking &amp; eating</button>
+            <button class="ask__filter" data-cat="growing" type="button">Growing your own</button>
+            <button class="ask__filter" data-cat="book" type="button">The book</button>
+          </nav>
+
+          <div class="ask__cta-card">
+            <h3>Not in the list?</h3>
+            <p>Send Gary your question. Once he's answered it, it joins the field desk for the next forager.</p>
+            <button class="btn btn--primary" type="button" data-ask-open>Ask a question</button>
+          </div>
+        </aside>
+
+        <!-- The board -->
+        <div class="ask__board">
+          <p class="ask__count" data-ask-count aria-live="polite"></p>
+          <div class="ask__list" data-ask-list>
+            <!-- no-JS fallback items -->
+            <article class="qa" data-cat="safety">
+              <h3 class="qa__q"><button type="button" class="qa__trigger" aria-expanded="false">Is it actually safe to eat what we find on a forage?<span class="qa__chevron" aria-hidden="true"></span></button></h3>
+              <div class="qa__a"><p>Every mushroom that comes home with you has been identified and cleared by me, by hand, in person. I never let anything into a basket I'm not certain of — and the whole point of the walk is teaching you to be that certain too. Identification is a skill, not a guess.</p><span class="qa__by">Gary · Mushroom Fundi</span></div>
+            </article>
+            <article class="qa" data-cat="forage">
+              <h3 class="qa__q"><button type="button" class="qa__trigger" aria-expanded="false">Do I need any experience to come along?<span class="qa__chevron" aria-hidden="true"></span></button></h3>
+              <div class="qa__a"><p>None at all. Most people arrive having never picked a wild mushroom in their lives. You'll leave able to confidently name a handful of species and knowing exactly which ones to never touch. Curiosity is the only requirement.</p><span class="qa__by">Gary · Mushroom Fundi</span></div>
+            </article>
+          </div>
+          <p class="ask__empty" data-ask-empty hidden>
+            Nothing matches that yet — <button type="button" class="link-arrow" data-ask-open>be the first to ask it <span>&rarr;</span></button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ask form (modal dialog) -->
+    <div class="askmodal" data-ask-modal hidden>
+      <div class="askmodal__backdrop" data-ask-close></div>
+      <div class="askmodal__panel" role="dialog" aria-modal="true" aria-labelledby="askmodal-title">
+        <button class="askmodal__x" type="button" data-ask-close aria-label="Close">&times;</button>
+        <p class="eyebrow eyebrow--green">Ask the Fundi</p>
+        <h3 class="askmodal__title" id="askmodal-title">Send Gary your question</h3>
+
+        <form class="askform" data-ask-form>
+          <label class="askform__field">
+            <span>Your question <em>*</em></span>
+            <textarea data-ask-question rows="3" required placeholder="e.g. When is porcini season around Cape Town?"></textarea>
+          </label>
+
+          <!-- Live duplicate nudge -->
+          <div class="askform__dupes" data-ask-dupes hidden>
+            <p class="askform__dupes-head">This may already be answered:</p>
+            <div data-ask-dupes-list></div>
+          </div>
+
+          <div class="askform__row">
+            <label class="askform__field">
+              <span>Name <em class="askform__opt">(optional)</em></span>
+              <input type="text" data-ask-name placeholder="First name" />
+            </label>
+            <label class="askform__field">
+              <span>Email <em class="askform__opt">(optional)</em></span>
+              <input type="email" data-ask-email placeholder="So Gary can reply" />
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg askform__submit">Send to Gary</button>
+          <p class="askform__note" data-ask-formnote>Gary reviews every question himself — answers are published without your email shown.</p>
+        </form>
+
+        <div class="askform__done" data-ask-done hidden>
+          <div class="askform__tick" aria-hidden="true">&#x2713;</div>
+          <h4>On its way to Gary.</h4>
+          <p data-ask-done-msg></p>
+          <button type="button" class="btn btn--ghost" data-ask-close>Close</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Join / CTA ===== -->
   <section class="join" id="join">
     <div class="container join__inner">
@@ -621,6 +812,7 @@
         <a href="#offer">What We Do</a>
         <a href="#fungi">Know Your Fungi</a>
         <a href="#book">The Book</a>
+        <a href="#porcini">Porcini Powder</a>
       </nav>
 
       <nav class="footer__col" aria-label="Contact">
@@ -696,26 +888,12 @@
           confused: '<em>Boletus reticulatus</em>, <em>B. aereus</em> and the bay bolete — but porcini flesh and pores don’t bruise blue.',
           fact: 'South African porcini are free of the insect larvae that plague European ones — making ours highly sought after worldwide.' },
 
-        { cat: 'edible', flag: 'Edible', img: 'sp-baybolete.jpg', name: 'Bay Bolete', latin: 'Imleria badia',
-          alt: 'Imleria badia, the bay bolete, in pine needles',
-          blurb: 'A beginner-friendly bolete with a glossy bay-brown cap.',
-          telltale: ['Bay to chestnut cap, sticky when wet, drying to a polished sheen', 'Stipe finely streaked — never a raised net like porcini', 'Pale pores bruise blue-green at a touch'],
-          confused: 'Other boletes — but the blue-bruising pores of young specimens give it away.',
-          fact: 'Those blue stains are just boletol oxidising — a harmless substance found in many boletes.' },
-
         { cat: 'medicinal', flag: 'Medicinal', img: 'sp-reishi.jpg', name: 'Reishi', latin: 'Ganoderma lucidum',
           alt: 'Ganoderma lucidum, reishi, a varnished bracket on wood',
           blurb: 'The lacquered "mushroom of immortality" — woody, and brewed for medicine.',
           telltale: ['Shiny, varnished crust like lacquered wood — cream to red-chestnut', 'Corky-to-woody bracket, often in overlapping tiers', 'White pore surface browns when bruised; rust-brown spores'],
           confused: '<em>Ganoderma applanatum</em> and <em>Amauroderma sprucei</em>; <em>G. tsugae</em> and <em>G. curtisii</em> share the varnished look.',
           fact: 'Called the "King of Herbs" in ancient China — traditionally taken for immunity, inflammation and stress.' },
-
-        { cat: 'edible', flag: 'Choice edible', img: 'g-termite.jpg', name: 'Termite Mushroom', latin: 'Termitomyces clypeatus',
-          alt: 'A large Termitomyces emerging from a termite mound',
-          blurb: "Among Africa's most prized wild edibles — farmed underground by termites.",
-          telltale: ['Brown cap with a sharply pointed umbo (central peak)', 'Cylindrical, lengthwise-grooved stipe; grows densely clustered', 'Stipe tapers into a long root reaching the termite nest'],
-          confused: 'Other <em>Termitomyces</em> and <em>Agaricus</em> species.',
-          fact: 'Termites farm it on underground combs — the mushroom rises on a root-like stalk (pseudorhiza) after the rains.' },
 
         { cat: 'poison', flag: 'Poisonous', img: 'sp-flyagaric.jpg', name: 'Fly Agaric', latin: 'Amanita muscaria',
           alt: 'Amanita muscaria, the fly agaric, scarlet with white warts',
@@ -928,8 +1106,6 @@
         { src: 'sp-russula.jpg',    cap: 'Brittlegill · Russula sp.' },
         { src: 'g-earthstar.jpg',   cap: 'Earthstar · Geastrum sp.' },
         { src: 'forest.jpg',        cap: 'Wild flush · indigenous forest' },
-        { src: 'g-termite.jpg',     cap: 'Termite mushroom · Termitomyces' },
-        { src: 'sp-baybolete.jpg',  cap: 'Bay bolete · Imleria badia' },
         { src: 'sp-porcini.jpg',    cap: 'Porcini · Boletus edulis' },
         { src: 'sp-reishi.jpg',     cap: 'Reishi · Ganoderma lucidum' },
         { src: 'sp-flyagaric.jpg',  cap: 'Fly agaric · Amanita muscaria' },
@@ -992,7 +1168,6 @@
       const shots = [
         { src: 'hero-porcini.jpg', latin: 'Boletus edulis',       name: 'Porcini',     dot: 'edible',    alt: 'A wild porcini (Boletus edulis) in Cape pine forest' },
         { src: 'sp-porcini.jpg',   latin: 'Boletus edulis',       name: 'King bolete', dot: 'edible',    alt: 'A king bolete pushing up through the forest floor' },
-        { src: 'sp-baybolete.jpg', latin: 'Imleria badia',        name: 'Bay bolete',  dot: 'edible',    alt: 'A bay bolete among the pine needles' },
         { src: 'sp-reishi.jpg',    latin: 'Ganoderma lucidum',    name: 'Reishi',      dot: 'medicinal', alt: 'A reishi bracket on dead wood' },
         { src: 'g-turkeytail.jpg', latin: 'Trametes versicolor',  name: 'Turkey tail', dot: 'medicinal', alt: 'Turkey tail bracket fungi climbing a trunk' },
       ];
@@ -1000,7 +1175,7 @@
       const pick = shots[Math.floor(Math.random() * shots.length)];
       img.src = 'assets/' + pick.src;
       img.alt = pick.alt;
-      tag.innerHTML = '<span class="dotmark dotmark--' + pick.dot + '"></span>' + pick.latin + ' · ' + pick.name;
+      tag.innerHTML = '<span class="dotmark dotmark--' + pick.dot + '"></span><span class="sci">' + pick.latin + '</span> · ' + pick.name;
     })();
 
     // Species ribbon — every mushroom in Gary's field guide scrolls past, in a
@@ -1085,11 +1260,242 @@
       window.addEventListener('resize', () => { clearTimeout(rw); rw = setTimeout(build, 400); }, { passive: true });
     })();
 
+    // ===== Ask the Fundi — searchable Q&A board =====
+    // Works with zero setup: the SEED archive below shows immediately and the
+    // "Ask" form sends straight to Gary on WhatsApp. Add Supabase keys in
+    // ASK_CONFIG to go fully live — questions then persist to a free database,
+    // and Gary answers/approves them right inside Supabase's table editor
+    // (no admin panel to build). Published rows replace the seed automatically.
+    (function () {
+      const board = document.querySelector('.ask');
+      if (!board) return;
+
+      const ASK_CONFIG = {
+        supabaseUrl:  '',   // e.g. 'https://xxxx.supabase.co'
+        supabaseKey:  '',   // the public anon key
+        table:        'questions',
+        whatsapp:     '27739362378',  // fallback: question is sent here
+      };
+
+      // Seed archive — Gary's real answers, shown until Supabase is connected.
+      // cat: forage | safety | cooking | growing | book
+      const SEED = [
+        { cat: 'safety',  q: "Is it actually safe to eat what we find on a forage?",
+          a: "Every mushroom that comes home with you has been identified and cleared by me, by hand, in person. I never let anything into a basket I'm not certain of — and the whole point of the walk is teaching you to be that certain too. Identification is a skill, not a guess." },
+        { cat: 'forage',  q: "Do I need any experience to come along?",
+          a: "None at all. Most people arrive having never picked a wild mushroom in their lives, and leave able to confidently name a handful of species — and knowing exactly which ones to never touch. Curiosity is the only requirement." },
+        { cat: 'forage',  q: "What should I wear and bring?",
+          a: "Warm layers you don't mind getting muddy, proper closed shoes or boots, and a basket or paper bag for your finds (never plastic — it sweats and spoils them). A small knife helps. We start before dawn, so something for the cold is the main thing." },
+        { cat: 'forage',  q: "Can I bring my kids?",
+          a: "Absolutely — children under 12 forage free, and they often have the sharpest eyes of the group. Just bear in mind it's an early, sometimes chilly start over uneven ground, so they'll need to be up for the walk." },
+        { cat: 'forage',  q: "Where do the forages take place?",
+          a: "Around the Cape's pine and indigenous forests — Tokai, the Peninsula and a few spots I keep quiet to protect them. Once you book on WhatsApp I'll share the exact meeting point for that morning, based on what's fruiting and the weather." },
+        { cat: 'forage',  q: "What happens if it rains, or we don't find anything?",
+          a: "A bit of rain is good — it's what brings the mushrooms up. But if we genuinely come up empty, that's the guarantee: we reschedule and go again at a later date, no extra charge. You won't pay to go home empty-handed." },
+        { cat: 'safety',  q: "When is mushroom season around Cape Town?",
+          a: "Our main flush rides the winter rains — roughly May through August is the heart of it for porcini and the boletes. There's something to find most of the year if you know where to look, but the cold, wet months are when the forest really wakes up." },
+        { cat: 'safety',  q: "Can you identify a mushroom from a photo I send you?",
+          a: "I'm always happy to look, and you're welcome to WhatsApp me a photo — but please never eat anything on the strength of a photo ID, mine or anyone's. So many species turn on details you can only check in the hand: smell, spore print, the base of the stem. A photo is a starting point, never the final word." },
+        { cat: 'safety',  q: "Can I forage on my own after doing one walk?",
+          a: "One walk makes you a far safer, sharper observer — but I'd never tell you you're 'done'. Build it slowly: stick to the two or three species you've learned cold, always check every feature, and when in any doubt at all, leave it. The forest will still be there next season." },
+        { cat: 'cooking', q: "How do I cook and store what we pick?",
+          a: "Cook wild mushrooms the day you find them where you can — most don't keep. Clean them dry with a brush rather than washing, then sauté hard in butter or oil to drive off the water. Porcini also dry beautifully for the pantry. And always cook wild mushrooms thoroughly; very few are safe raw." },
+        { cat: 'growing', q: "Can I grow my own mushrooms at home?",
+          a: "You can, and it's a lovely way in. Oyster and shiitake are the forgiving ones to start with on a kit or logs. It won't replace the thrill of the forest, but it teaches you how fungi actually live — which makes you a better forager too." },
+        { cat: 'book',    q: "How do I get the field guide, and is there an ebook?",
+          a: "The Field Guide to Mushrooms & other Fungi of South Africa is the one to get — message me on WhatsApp and I'll point you to where it's in stock. It's built as a print field guide you can take into the forest; a digital version isn't the same in the rain, but ask me for the latest on availability." },
+        { cat: 'book',    q: "How many species does the guide cover?",
+          a: "Over 200, all photographed across South Africa, with clear edibility flags, look-alike warnings and a seasonal calendar. It's distilled from 25-odd years of forest notes and spore prints — the book I wish I'd had when I started." },
+      ];
+
+      const CAT_LABEL = { forage:'On the forage', safety:'Safety & ID', cooking:'Cooking & eating', growing:'Growing your own', book:'The book' };
+
+      const listEl   = board.querySelector('[data-ask-list]');
+      const countEl  = board.querySelector('[data-ask-count]');
+      const emptyEl  = board.querySelector('[data-ask-empty]');
+      const searchEl = board.querySelector('[data-ask-search]');
+      const filterEls= [...board.querySelectorAll('[data-ask-filters] .ask__filter')];
+      const esc = (s) => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+      let DATA = SEED.slice();
+      let activeCat = 'all';
+      let query = '';
+
+      const matches = (item) => {
+        if (activeCat !== 'all' && item.cat !== activeCat) return false;
+        if (!query) return true;
+        const hay = (item.q + ' ' + item.a + ' ' + (CAT_LABEL[item.cat] || '')).toLowerCase();
+        return query.toLowerCase().split(/\s+/).filter(Boolean).every(w => hay.includes(w));
+      };
+
+      const render = () => {
+        const shown = DATA.filter(matches);
+        listEl.innerHTML = shown.map(item => `
+          <article class="qa" data-cat="${item.cat}">
+            <h3 class="qa__q">
+              <button type="button" class="qa__trigger" aria-expanded="false">
+                <span class="qa__cat">${esc(CAT_LABEL[item.cat] || '')}</span>
+                <span class="qa__text">${esc(item.q)}</span>
+                <span class="qa__chevron" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="qa__a"><p>${esc(item.a)}</p><span class="qa__by">Gary · Mushroom Fundi</span></div>
+          </article>`).join('');
+
+        countEl.textContent = shown.length
+          ? `${shown.length} answer${shown.length === 1 ? '' : 's'}${activeCat !== 'all' ? ' · ' + CAT_LABEL[activeCat] : ''}${query ? ' matching “' + query + '”' : ''}`
+          : '';
+        emptyEl.hidden = shown.length > 0;
+        wireAccordion();
+      };
+
+      const wireAccordion = () => {
+        listEl.querySelectorAll('.qa__trigger').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const open = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!open));
+            btn.closest('.qa').classList.toggle('is-open', !open);
+          });
+        });
+      };
+
+      searchEl.addEventListener('input', () => { query = searchEl.value.trim(); render(); });
+      filterEls.forEach(f => f.addEventListener('click', () => {
+        filterEls.forEach(x => x.classList.remove('is-active'));
+        f.classList.add('is-active');
+        activeCat = f.dataset.cat;
+        render();
+      }));
+
+      // ---- Ask modal ----
+      const modal    = board.querySelector('[data-ask-modal]');
+      const form     = board.querySelector('[data-ask-form]');
+      const qInput   = board.querySelector('[data-ask-question]');
+      const nameIn   = board.querySelector('[data-ask-name]');
+      const emailIn  = board.querySelector('[data-ask-email]');
+      const dupes    = board.querySelector('[data-ask-dupes]');
+      const dupesList= board.querySelector('[data-ask-dupes-list]');
+      const doneEl   = board.querySelector('[data-ask-done]');
+      const doneMsg  = board.querySelector('[data-ask-done-msg]');
+      let lastFocus  = null;
+
+      const openModal = (prefill) => {
+        lastFocus = document.activeElement;
+        form.hidden = false; doneEl.hidden = true;
+        modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        if (prefill) qInput.value = prefill;
+        showDupes();
+        setTimeout(() => qInput.focus(), 40);
+      };
+      const closeModal = () => {
+        modal.hidden = true;
+        document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+      };
+
+      board.querySelectorAll('[data-ask-open]').forEach(b => b.addEventListener('click', () => openModal(searchEl.value.trim())));
+      board.querySelectorAll('[data-ask-close]').forEach(b => b.addEventListener('click', closeModal));
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+      // Live duplicate nudge as they type
+      const showDupes = () => {
+        const v = qInput.value.trim().toLowerCase();
+        const words = v.split(/\s+/).filter(w => w.length > 2);
+        if (words.length < 1) { dupes.hidden = true; return; }
+        const hits = DATA
+          .map(item => ({ item, score: words.filter(w => (item.q + ' ' + item.a).toLowerCase().includes(w)).length }))
+          .filter(x => x.score > 0)
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 3)
+          .map(x => x.item);
+        if (!hits.length) { dupes.hidden = true; return; }
+        dupesList.innerHTML = hits.map((item, i) => `
+          <button type="button" class="askform__dupe" data-dupe="${i}">
+            <span>${esc(item.q)}</span><em>read answer &rarr;</em>
+          </button>`).join('');
+        dupesList.querySelectorAll('[data-dupe]').forEach((b, i) => b.addEventListener('click', () => {
+          closeModal();
+          searchEl.value = ''; query = ''; activeCat = 'all';
+          filterEls.forEach(x => x.classList.toggle('is-active', x.dataset.cat === 'all'));
+          render();
+          const target = [...listEl.querySelectorAll('.qa')].find(el => el.querySelector('.qa__text, .qa__q').textContent.includes(hits[i].q));
+          if (target) {
+            target.querySelector('.qa__trigger').setAttribute('aria-expanded', 'true');
+            target.classList.add('is-open');
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            target.classList.add('qa--flash');
+            setTimeout(() => target.classList.remove('qa--flash'), 1600);
+          }
+        }));
+        dupes.hidden = false;
+      };
+      qInput.addEventListener('input', showDupes);
+
+      // Submit
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const question = qInput.value.trim();
+        if (!question) return;
+        const name = nameIn.value.trim();
+        const email = emailIn.value.trim();
+        let viaDb = false;
+
+        if (ASK_CONFIG.supabaseUrl && ASK_CONFIG.supabaseKey) {
+          try {
+            const res = await fetch(`${ASK_CONFIG.supabaseUrl}/rest/v1/${ASK_CONFIG.table}`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'apikey': ASK_CONFIG.supabaseKey,
+                'Authorization': 'Bearer ' + ASK_CONFIG.supabaseKey,
+                'Prefer': 'return=minimal',
+              },
+              body: JSON.stringify({ question, name: name || null, email: email || null, status: 'pending' }),
+            });
+            viaDb = res.ok;
+          } catch (_) { viaDb = false; }
+        }
+
+        if (!viaDb) {
+          // Fallback: hand the question to Gary on WhatsApp.
+          const txt = `Hi Gary, a question for the Mushroom Fundi field desk:%0A%0A${encodeURIComponent(question)}` +
+            (name ? `%0A%0A— ${encodeURIComponent(name)}` : '') + (email ? ` (${encodeURIComponent(email)})` : '');
+          window.open(`https://wa.me/${ASK_CONFIG.whatsapp}?text=${txt}`, '_blank', 'noopener');
+        }
+
+        doneMsg.textContent = viaDb
+          ? "Gary reviews each question himself. Once he's answered yours, it'll appear here on the field desk."
+          : "We've opened WhatsApp with your question ready to send — just hit send and Gary will take it from there.";
+        form.hidden = true; doneEl.hidden = false;
+        form.reset(); dupes.hidden = true;
+      });
+
+      // Pull live published Q&A from Supabase if configured.
+      const loadLive = async () => {
+        if (!ASK_CONFIG.supabaseUrl || !ASK_CONFIG.supabaseKey) return;
+        try {
+          const res = await fetch(`${ASK_CONFIG.supabaseUrl}/rest/v1/${ASK_CONFIG.table}?status=eq.published&select=question,answer,category&order=created_at.desc`, {
+            headers: { 'apikey': ASK_CONFIG.supabaseKey, 'Authorization': 'Bearer ' + ASK_CONFIG.supabaseKey },
+          });
+          if (!res.ok) return;
+          const rows = await res.json();
+          if (Array.isArray(rows) && rows.length) {
+            DATA = rows.map(r => ({ cat: r.category || 'forage', q: r.question, a: r.answer }));
+            render();
+          }
+        } catch (_) { /* keep seed */ }
+      };
+
+      render();
+      loadLive();
+    })();
+
     // reveal on scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
-    document.querySelectorAll('[data-reveal], .card, .quote, .section-head, .about__body, .about__media, .book__visual, .book__body, .join__inner, .spec, .fact, .forage__book, .hero__copy, .hero__media')
+    document.querySelectorAll('[data-reveal], .card, .quote, .section-head, .about__body, .about__media, .book__visual, .book__body, .join__inner, .spec, .fact, .forage__book, .ask__board, .spell')
       .forEach(el => { el.classList.add('reveal'); io.observe(el); });
   </script>
 </body>
